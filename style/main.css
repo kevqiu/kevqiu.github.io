@@ -28,11 +28,8 @@ html {
   filter: brightness(75%);
 
   opacity: 0;
-  -webkit-animation: fadein 3s forwards; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 3s forwards; /* Firefox < 16 */
-  -ms-animation: fadein 3s forwards; /* Internet Explorer */
-  -o-animation: fadein 3s forwards; /* Opera < 12.1 */
-  animation: fadein 3s forwards;
+  -webkit-animation: fadein 5s forwards; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 5s forwards;
 }
 
 .container{
@@ -55,6 +52,10 @@ canvas {
   padding: 0;
   margin: auto;
   display: block;
+
+  opacity: 0;
+  -webkit-animation: fadein 3s forwards; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 3s forwards;
 }
 
 #upper-line {
@@ -73,10 +74,10 @@ canvas {
   margin: 0 auto;
 
   opacity: 0;
-  -webkit-animation: fadein 1s forwards; /* Safari, Chrome and Opera > 12.1 */
-  animation: fadein 1s forwards;
-  -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
-  animation-delay: 1s;
+  -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 2s forwards;
+  -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
+  animation-delay: 1.5s;
 }
 
 .button-row td {
@@ -119,8 +120,8 @@ hr {
 
 h1 {
   opacity: 0;
-  -webkit-animation: fadein 1s forwards; /* Safari, Chrome and Opera > 12.1 */
-  animation: fadein 1s forwards;
+  -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 2s forwards;
 
   font-family: biko;
   font-size: 50px;
@@ -131,8 +132,8 @@ h1 {
 
 h3 {
   opacity: 0;
-  -webkit-animation: fadein 1s forwards; /* Safari, Chrome and Opera > 12.1 */
-  animation: fadein 1s forwards;
+  -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 2s forwards;
 
   font-family: lane;
   font-size: 18px;
