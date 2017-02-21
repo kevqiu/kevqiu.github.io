@@ -8,8 +8,8 @@
 }
 
 html {
-  font-family: biko;
   color: white;
+  background-color: black;
 }
 
 .background-image {
@@ -18,10 +18,21 @@ html {
   right: 0;
   z-index: 1;
   margin-top: -8px;
-  background-image: url("../images/bg.jpg");
+
+  background-image: url("../images/trees.jpg");
   min-width: 100%;
   min-height: 100%;
-  background-size:100%;
+  background-size: 100%;
+
+  -webkit-filter: brightness(75%); /* Safari */
+  filter: brightness(75%);
+
+  opacity: 0;
+  -webkit-animation: fadein 3s forwards; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s forwards; /* Firefox < 16 */
+  -ms-animation: fadein 3s forwards; /* Internet Explorer */
+  -o-animation: fadein 3s forwards; /* Opera < 12.1 */
+  animation: fadein 3s forwards;
 }
 
 .container{
@@ -40,17 +51,78 @@ html {
    height: 400px;
 }
 
+canvas {
+  padding: 0;
+  margin: auto;
+  display: block;
+}
+
+#upper-line {
+  width: 80%;
+  height: 40px;
+}
+
+#lower-line {
+  width: 80%;
+  height: 40px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.button-row {
+  margin: 0 auto;
+
+  opacity: 0;
+  -webkit-animation: fadein 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 1s forwards;
+  -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+  animation-delay: 1s;
+}
+
+.button-row td {
+  padding: 0 10px 10px;
+}
+
+.menu-button {
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border: 1px solid #ffffff;
+  outline: none;
+
+  background-color: Transparent;
+	color: #ffffff;
+  font-family: lane;
+  letter-spacing: 2px;
+
+	padding-top: 12px;
+	padding-bottom: 12px;
+  width: 120px;
+}
+
+.menu-button:hover {
+	background: rgba(255, 255, 255, .2);
+}
+
+.menu-button:focus {
+  border-color: white;
+}
+
+.menu-button:active {
+	position:relative;
+	top:2px;
+}
+
 hr {
-    display: block;
-    height: 1px;
-    width: 100%;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 30px auto;
-    padding: 0;
+
 }
 
 h1 {
+  opacity: 0;
+  -webkit-animation: fadein 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 1s forwards;
+
+  font-family: biko;
   font-size: 50px;
   font-weight: 10;
   letter-spacing: 0.15em;
@@ -58,6 +130,10 @@ h1 {
 }
 
 h3 {
+  opacity: 0;
+  -webkit-animation: fadein 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 1s forwards;
+
   font-family: lane;
   font-size: 18px;
   font-weight: 100;

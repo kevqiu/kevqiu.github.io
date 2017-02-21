@@ -3,21 +3,28 @@
     <head>
         <title>Kevin Qiu</title>
         <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/animations.css">
         <link rel="icon" href="images/k.ico">
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+        <script type="text/javascript" src="js/main.js" ></script>
     </head>
 
     <body>
-    <div class="background-image"></div>
-    <div class="container">
-        <div class="content">
-            <hr/>
-            <h1>KEVIN QIU</h1>
-            <h3>Candidate for B.ASc of Comptuer Engineering</h3>
-            <h3>University of British Columbia</h3>
-            <hr/>
+        <div class="background-image"></div>
+        <div class="container">
+            <div class="content">
+                <canvas id="upper-line"></canvas>
+                <h1>KEVIN QIU</h1>
+                <h3>Candidate for B.ASc of Comptuer Engineering</h3>
+                <h3>University of British Columbia</h3>
+                <canvas id="lower-line"></canvas>
+                <table class="button-row">
+                    <td><button type="button" class="menu-button">ABOUT</button></td>
+                    <td><button type="button" class="menu-button">SKILLS</button></td>
+                    <td><button type="button" class="menu-button">RESUME</button></td>
+                    <td><button type="button" class="menu-button">CONTACT</button></td>
+                </table>
+            </div>
         </div>
-    </div>
-
-
     </body>
 </html>
