@@ -3,28 +3,48 @@
     <head>
         <title>Kevin Qiu</title>
         <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/modal.css">
         <link rel="stylesheet" href="style/animations.css">
         <link rel="icon" href="images/k.ico">
-        <script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
-        <script type="text/javascript" src="js/main.js" ></script>
     </head>
 
     <body>
         <div class="background-image"></div>
-        <div class="container">
-            <div class="content">
+
+        <div id="aboutModal" class="modal">
+          <div id="aboutModalContent" class="modal-content">
+            <span class="close" id="aboutClose">&times;</span>
+            <h2>ABOUT ME</h2>
+            <hr/>
+            <p>Some text in the Modal..</p>
+          </div>
+        </div>
+
+        <div id="container">
+            <div id="content">
                 <canvas id="upper-line"></canvas>
                 <h1>KEVIN QIU</h1>
                 <h3>Candidate for B.ASc of Comptuer Engineering</h3>
                 <h3>University of British Columbia</h3>
                 <canvas id="lower-line"></canvas>
                 <table class="button-row">
-                    <td><button type="button" class="menu-button">ABOUT</button></td>
+                    <td><button type="button" class="menu-button" id="aboutBtn">ABOUT</button></td>
                     <td><button type="button" class="menu-button">SKILLS</button></td>
                     <td><button type="button" class="menu-button">RESUME</button></td>
                     <td><button type="button" class="menu-button">CONTACT</button></td>
                 </table>
+                <br style="line-height:30px;">
+                <table class="icon-row">
+                    <td>
+                        <a href="https://github.com/kevqiu"><img class="link-icon" src="images/github.png"/></a>
+                    </td>
+                    <td>
+                        <a href="https://www.linkedin.com/in/kevin-qiu-b673486a/"><img class="link-icon" src="images/linkedin.png"/></a>
+                    </td>
+                </table>
             </div>
         </div>
     </body>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+    <script type="text/javascript" src="js/main.js" ></script>
 </html>

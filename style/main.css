@@ -32,16 +32,16 @@ html {
   animation: fadein 5s forwards;
 }
 
-.container{
+#container{
    position: absolute;
-   z-index: 9999;
+   z-index: 1;
    top: 50%;
    margin-top: -200px;/* half of #content height*/
    left: 0;
    width: 100%;
 }
 
-.content {
+#content {
    width: 700px;
    margin-left: auto;
    margin-right: auto;
@@ -114,8 +114,28 @@ canvas {
 	top:2px;
 }
 
-hr {
+.icon-row {
+  margin: 0 auto;
 
+  opacity: 0;
+  -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 2s forwards;
+  -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+  animation-delay: 2s;
+}
+
+.icon-row td {
+  padding: 0 10px 10px;
+}
+
+.link-icon {
+  opacity: 0.4;
+  height: 30px;
+  width: 30px;
+}
+
+.link-icon:hover {
+  opacity: 0.9;
 }
 
 h1 {
@@ -125,6 +145,14 @@ h1 {
 
   font-family: biko;
   font-size: 50px;
+  font-weight: 10;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+
+h2 {
+  font-family: biko;
+  font-size: 30px;
   font-weight: 10;
   letter-spacing: 0.15em;
   text-align: center;

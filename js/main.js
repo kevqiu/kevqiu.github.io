@@ -1,3 +1,35 @@
+var container = document.getElementById('container');
+var aboutModal = document.getElementById('aboutModal');
+var aboutButton = document.getElementById('aboutBtn');
+var aboutClose = document.getElementById('aboutClose');
+
+// When the user clicks on the button, open the modal
+aboutButton.onclick = function() {
+    fadeOut(container);
+    setTimeout(function () {
+        showModal(aboutModal);
+        aboutModal.style.display = "block";
+    }, 700);
+}
+
+// When the user clicks on <span> (x), close the modal
+aboutClose.onclick = function() {
+    hideModal(aboutModal);
+    setTimeout(function () {
+        fadeIn(container);
+    }, 700);
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == aboutModal) {
+        hideModal(aboutModal);
+        setTimeout(function () {
+            fadeIn(container);
+        }, 700);
+    }
+}
+
 window.onload = function() {
     var canvas1 = $("#upper-line")[0];
     var c1 = canvas1.getContext("2d");
@@ -29,4 +61,27 @@ window.onload = function() {
         c2.lineTo(startX2 + (endX2 - startX2) * amount, y);
         c2.stroke();
     }, 14);
+}
+
+function fadeOut(element) {
+    element.classList.remove("fade-in");
+    //element.classList.add("ease-out");
+    element.classList.add("fade-out");
+}
+
+function fadeIn(element) {
+    element.classList.remove("fade-out");
+    element.classList.add("fade-in");
+}
+
+function showModal(modal) {
+    modal.classList.remove("fade-out-modal");
+    modal.getElementsByTagName('div')[0].classList.remove("fade-out-modal");
+    modal.classList.add("fade-in-modal");
+}
+
+function hideModal(modal) {
+    modal.classList.remove("fade-in-modal");
+    modal.classList.add("fade-out-modal");
+    modal.getElementsByTagName('div')[0].classList.add("fade-out-modal");
 }
