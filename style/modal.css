@@ -16,7 +16,8 @@
     background-color: rgba(0,0,0,0.75);
     margin: 7% auto;
     padding: 20px 40px 40px;
-    width: 675px;
+    max-width: 675px;
+    width: 60%;
 }
 
 /* The Close Button */
