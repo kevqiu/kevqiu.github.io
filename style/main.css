@@ -20,8 +20,10 @@ html {
   margin-top: -8px;
 
   background-image: url("../images/trees.jpg");
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-size: cover;
 
   -webkit-filter: brightness(75%); /* Safari */
   filter: brightness(75%);
@@ -34,14 +36,15 @@ html {
 #container{
    position: absolute;
    z-index: 1;
-   top: 50%;
+   top: 45%;
    margin-top: -200px;/* half of #content height*/
    left: 0;
    width: 100%;
 }
 
 #content {
-   width: 700px;
+   width: 70%;
+   max-width: 800px;
    margin-left: auto;
    margin-right: auto;
    height: 400px;
@@ -59,17 +62,19 @@ canvas {
 
 #upper-line {
   width: 80%;
+  min-width: 580px;
   height: 40px;
 }
 
 #lower-line {
   width: 80%;
+  min-width: 580px;
   height: 40px;
   margin-top: 50px;
   margin-bottom: 15px;
 }
 
-.button-row {
+.button-table {
   margin: 0 auto;
 
   opacity: 0;
@@ -79,7 +84,7 @@ canvas {
   animation-delay: 1.5s;
 }
 
-.button-row td {
+.button-table td {
   padding: 0 10px 10px;
 }
 
@@ -168,3 +173,4 @@ h3 {
   letter-spacing: 4px;
   text-align: center;
 }
+

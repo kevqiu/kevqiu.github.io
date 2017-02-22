@@ -1,0 +1,91 @@
+/* MOBILE BUTTONS */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+	.button-table table, .button-table th, .button-table td, .button-table tr {
+    display: block;
+	}
+
+  .button-table td {
+    padding: 0;
+  }
+
+	.button-table thead .button-table tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	.button-table tr {
+  }
+
+	.button-table td {
+    text-align: center;
+	}
+
+  .menu-button {
+  	-moz-border-radius:0px;
+  	-webkit-border-radius:0px;
+  	border-radius:0px;
+    font-size: 24px;
+    height: 80px;
+    width: 300px;
+  }
+
+  #upper-line {
+    width: 80%;
+    min-width: 0;
+    height: 40px;
+  }
+
+  #lower-line {
+    width: 80%;
+    min-width: 0;
+
+    height: 40px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 780px){
+
+	.button-table table, .button-table th, .button-table td, .button-table tr {
+    display: block;
+	}
+
+  .button-table td {
+    padding: 0;
+  }
+
+	.button-table thead .button-table tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	.button-table tr {
+  }
+
+	.button-table td {
+    text-align: center;
+	}
+
+  .menu-button {
+    margin-bottom: 12px;
+    width: 200px;
+  }
+
+  #upper-line {
+    width: 80%;
+    min-width: 0;
+    height: 40px;
+  }
+
+  #lower-line {
+    width: 80%;
+    min-width: 0;
+
+    height: 40px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+}
