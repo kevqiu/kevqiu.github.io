@@ -47,7 +47,7 @@
 }
 
 /* SMALL WINDOW */
-@media (max-width: 780px) {
+/*@media (max-width: 780px) {
 
 	.button-table table, .button-table th, .button-table td, .button-table tr {
     display: block;
@@ -89,4 +89,4 @@
     margin-top: 50px;
     margin-bottom: 15px;
   }
-}
+}*/
