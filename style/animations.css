@@ -73,6 +73,21 @@
     to   { opacity: 0; visibility: hidden;}
 }
 
+@keyframes fadeinContent {
+    from { -webkit-transform: scale(0.95); }
+    to   { -webkit-transform: scale(1); }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadeinContent {
+    from { -webkit-transform: scale(0.95); }
+    to   { -webkit-transform: scale(1); }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeinContent {
+    from { -webkit-transform: scale(0.95); }
+    to   { -webkit-transform: scale(1); }
+}
+
 @keyframes fadeoutContent {
     from { -webkit-transform: scale(1); }
     to   { -webkit-transform: scale(0.95); }
@@ -86,4 +101,82 @@
 @-webkit-keyframes fadeoutContent {
     from { -webkit-transform: scale(1); }
     to   { -webkit-transform: scale(0.95); }
+}
+
+@keyframes blurIn {
+    from { filter: blur(6px); -webkit-filter: blur(6px); }
+    to   { filter: blur(0px); -webkit-filter: blur(0px); }
+}
+/* Firefox < 16 */
+@-moz-keyframes blurIn {
+    from { filter: blur(6px); -webkit-filter: blur(6px); }
+    to   { filter: blur(0px); -webkit-filter: blur(0px); }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes blurIn {
+    from { filter: blur(6px); -webkit-filter: blur(6px); }
+    to   { filter: blur(0px); -webkit-filter: blur(0px); }
+}
+
+@keyframes blurOut {
+    from { filter: blur(0px); -webkit-filter: blur(0px); }
+    to   { filter: blur(6px); -webkit-filter: blur(6px); }
+}
+/* Firefox < 16 */
+@-moz-keyframes blurOut {
+    from { filter: blur(0px); -webkit-filter: blur(0px);}
+    to   { filter: blur(6px); -webkit-filter: blur(6px);}
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes blurOut {
+    from { filter: blur(0px); -webkit-filter: blur(0px);}
+    to   { filter: blur(6px); -webkit-filter: blur(6px);}
+}
+
+
+.fade-in {
+    -webkit-animation: fadeinContainer 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+    animation: fadeinContainer 1s forwards;
+}
+
+.fade-out {
+    -webkit-animation: fadeoutContainer 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+    animation: fadeoutContainer 1s forwards;
+}
+
+.blur-in {
+    -webkit-animation: blurIn 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+    animation: blurIn 1s forwards;
+}
+
+.blur-out {
+    -webkit-animation: blurOut 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+    animation: blurOut 1s forwards;
+}
+
+.ease-out {
+    -webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+.fade-in-modal {
+    -webkit-animation: fadeinModal 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+    animation: fadeinModal 1s forwards;
+}
+
+.fade-out-modal {
+    -webkit-animation: fadeoutModal 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+    animation: fadeoutModal 1s forwards;
+}
+
+.fade-in-content {
+    -webkit-animation: fadeinContent 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+    animation: fadeinContent 1s forwards;
+}
+
+.fade-out-content {
+    -webkit-animation: fadeoutContent 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+    animation: fadeoutContent 1s forwards;
 }

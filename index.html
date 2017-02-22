@@ -6,19 +6,70 @@
         <link rel="stylesheet" href="style/modal.css">
         <link rel="stylesheet" href="style/animations.css">
         <link rel="stylesheet" href="style/mobile.css">
+        <link rel="stylesheet" href="style/about.css">
         <link rel="icon" href="images/k.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
-        <div class="background-image"></div>
+        <div id="background">
+            <div id="background-image"></div>
+        </div>
 
         <div id="aboutModal" class="modal">
           <div id="aboutModalContent" class="modal-content">
             <span class="close" id="aboutClose">&times;</span>
             <h2>ABOUT ME</h2>
             <hr/>
-            <p>Some text in the Modal..</p>
+            <div class="clearfix">
+                <img id="me" src="images/me.jpg"/>
+                <p>
+                    My name is Kevin Qiu and I am third year Computer Engineering student studying at
+                    the University of Britsh Columbia. I am currently on a co-op work term at
+                    <a href="https://www.visioncritical.com/" style="color:white">Vision Critical</a>
+                    working from Jan 2017 until Aug 2017 . <br><br/>
+
+                    A bit of history as to why I decided to go into Computer Engineering: as a kid
+                    I was always interested in computers and technology in general. I enjoyed building
+                    things, whether it be with LEGO or in a video game, and had a knack for coming up
+                    with the strangest creations. In high school, I was part of a world-class VEX Robotics team,
+                    the Robosavages of Gladstone Secondary School. This was my first glimpse into the world
+                    of programming and I instantly fell in love with the idea of bringing something I
+                    built to life with code. <br><br/>
+
+                    Some of my hobbies include collecting and building keyboards, tinkering with hardware,
+                    and exploring cities for the best food out there. I'm passionate about games, both video
+                    and board alike, and I like to admire the work that goes into creating them.
+                    I also enjoy hiking and exploring nature whenever I get the chance to.
+                </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="skillsModal" class="modal">
+          <div id="skillsModalContent" class="modal-content">
+            <span class="close" id="skillsClose">&times;</span>
+            <h2>SKILLS</h2>
+            <hr/>
+            <p>Under construction! 🔧</p>
+          </div>
+        </div>
+
+        <div id="resumeModal" class="modal">
+          <div id="resumeModalContent" class="modal-content">
+            <span class="close" id="resumeClose">&times;</span>
+            <h2>RESUME</h2>
+            <hr/>
+            <p>Under construction! 🔧</p>
+          </div>
+        </div>
+
+        <div id="contactModal" class="modal">
+          <div id="contactModalContent" class="modal-content">
+            <span class="close" id="contactClose">&times;</span>
+            <h2>CONTACT</h2>
+            <hr/>
+            <p> Under construction! 🔧</p>
           </div>
         </div>
 
@@ -31,9 +82,9 @@
                 <canvas id="lower-line"></canvas>
                 <table class="button-table">
                     <td><button type="button" class="menu-button" id="aboutBtn">ABOUT</button></td>
-                    <td><button type="button" class="menu-button">SKILLS</button></td>
-                    <td><button type="button" class="menu-button">RESUME</button></td>
-                    <td><button type="button" class="menu-button">CONTACT</button></td>
+                    <td><button type="button" class="menu-button" id="skillsBtn">SKILLS</button></td>
+                    <td><button type="button" class="menu-button" id="resumeBtn">RESUME</button></td>
+                    <td><button type="button" class="menu-button" id="contactBtn">CONTACT</button></td>
                 </table>
                 <br style="line-height:30px;">
                 <table class="icon-row">

@@ -1,9 +1,22 @@
 var container = document.getElementById('container');
+var background = document.getElementById('background');
+
 var aboutModal = document.getElementById('aboutModal');
 var aboutButton = document.getElementById('aboutBtn');
 var aboutClose = document.getElementById('aboutClose');
 
-// When the user clicks on the button, open the modal
+var skillsModal = document.getElementById('skillsModal');
+var skillsButton = document.getElementById('skillsBtn');
+var skillsClose = document.getElementById('skillsClose');
+
+var resumeModal = document.getElementById('resumeModal');
+var resumeButton = document.getElementById('resumeBtn');
+var resumeClose = document.getElementById('resumeClose');
+
+var contactModal = document.getElementById('contactModal');
+var contactButton = document.getElementById('contactBtn');
+var contactClose = document.getElementById('contactClose');
+
 aboutButton.onclick = function() {
     fadeOut(container);
     setTimeout(function () {
@@ -12,7 +25,30 @@ aboutButton.onclick = function() {
     }, 700);
 }
 
-// When the user clicks on <span> (x), close the modal
+skillsButton.onclick = function() {
+    fadeOut(container);
+    setTimeout(function () {
+        showModal(skillsModal);
+        skillsModal.style.display = "block";
+    }, 700);
+}
+
+resumeButton.onclick = function() {
+    fadeOut(container);
+    setTimeout(function () {
+        showModal(resumeModal);
+        resumeModal.style.display = "block";
+    }, 700);
+}
+
+contactButton.onclick = function() {
+    fadeOut(container);
+    setTimeout(function () {
+        showModal(contactModal);
+        contactModal.style.display = "block";
+    }, 700);
+}
+
 aboutClose.onclick = function() {
     hideModal(aboutModal);
     setTimeout(function () {
@@ -20,10 +56,30 @@ aboutClose.onclick = function() {
     }, 700);
 }
 
-// When the user clicks anywhere outside of the modal, close it
+skillsClose.onclick = function() {
+    hideModal(skillsModal);
+    setTimeout(function () {
+        fadeIn(container);
+    }, 700);
+}
+
+resumeClose.onclick = function() {
+    hideModal(resumeModal);
+    setTimeout(function () {
+        fadeIn(container);
+    }, 700);
+}
+
+contactClose.onclick = function() {
+    hideModal(contactModal);
+    setTimeout(function () {
+        fadeIn(container);
+    }, 700);
+}
+
 window.onclick = function(event) {
-    if (event.target == aboutModal) {
-        hideModal(aboutModal);
+    if (event.target == aboutModal || event.target == skillsModal || event.target == resumeModal || event.target == contactModal) {
+        hideModal(event.target);
         setTimeout(function () {
             fadeIn(container);
         }, 700);
@@ -65,23 +121,28 @@ window.onload = function() {
 
 function fadeOut(element) {
     element.classList.remove("fade-in");
-    //element.classList.add("ease-out");
     element.classList.add("fade-out");
+    background.classList.remove("blur-in");
+    background.classList.add("blur-out");
 }
 
 function fadeIn(element) {
     element.classList.remove("fade-out");
     element.classList.add("fade-in");
+    background.classList.remove("blur-out");
+    background.classList.add("blur-in");
 }
 
 function showModal(modal) {
     modal.classList.remove("fade-out-modal");
-    modal.getElementsByTagName('div')[0].classList.remove("fade-out-modal");
+    modal.getElementsByTagName('div')[0].classList.remove("fade-out-content");
     modal.classList.add("fade-in-modal");
+    modal.getElementsByTagName('div')[0].classList.add("fade-in-content");
 }
 
 function hideModal(modal) {
     modal.classList.remove("fade-in-modal");
+    modal.getElementsByTagName('div')[0].classList.remove("fade-in-content");
     modal.classList.add("fade-out-modal");
-    modal.getElementsByTagName('div')[0].classList.add("fade-out-modal");
+    modal.getElementsByTagName('div')[0].classList.add("fade-out-content");
 }

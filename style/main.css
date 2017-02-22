@@ -6,13 +6,17 @@
     font-family: lane;
     src: url(../fonts/Gravity-Light.otf);
 }
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/Roboto-Light.ttf);
+}
 
 html {
   color: white;
   background-color: black;
 }
 
-.background-image {
+#background-image {
   position: fixed;
   left: 0;
   right: 0;
@@ -25,11 +29,11 @@ html {
   background-size: 100% 100%;
   background-size: cover;
 
-  -webkit-filter: brightness(75%); /* Safari */
+  -webkit-filter: brightness(75%);
   filter: brightness(75%);
 
   opacity: 0;
-  -webkit-animation: fadein 5s forwards; /* Safari, Chrome and Opera > 12.1 */
+  -webkit-animation: fadein 5s forwards;
   animation: fadein 5s forwards;
 }
 
@@ -174,3 +178,10 @@ h3 {
   text-align: center;
 }
 
+p {
+  font-family: roboto;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+}
