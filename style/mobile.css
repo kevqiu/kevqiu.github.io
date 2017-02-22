@@ -1,5 +1,5 @@
 /* MOBILE BUTTONS */
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
+/*@media screen and (max-device-width: 480px) and (orientation: portrait) {
 	.button-table table, .button-table th, .button-table td, .button-table tr {
     display: block;
 	}
@@ -44,10 +44,10 @@
     margin-top: 50px;
     margin-bottom: 15px;
   }
-}
+}*/
 
-/* SMALL WINDOW */
-/*@media (max-width: 780px) {
+ /*SMALL WINDOW */
+@media (max-width: 780px) {
 
 	.button-table table, .button-table th, .button-table td, .button-table tr {
     display: block;
@@ -72,7 +72,18 @@
 
   .menu-button {
     margin-bottom: 12px;
+    font-size: 16px;
+    height: 60px;
     width: 200px;
+  }
+
+  #container{
+     position: absolute;
+     z-index: 1;
+     top: 35%;
+     margin-top: -200px;/* half of #content height*/
+     left: 0;
+     width: 100%;
   }
 
   #upper-line {
@@ -89,4 +100,4 @@
     margin-top: 50px;
     margin-bottom: 15px;
   }
-}*/
+}
