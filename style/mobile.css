@@ -46,7 +46,8 @@
   }
 }
 
-@media (max-width: 780px){
+/* SMALL WINDOW */
+@media (max-width: 780px) {
 
 	.button-table table, .button-table th, .button-table td, .button-table tr {
     display: block;
