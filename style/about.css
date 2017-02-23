@@ -15,3 +15,11 @@
     clear: both;
     display: table;
 }
+
+.clearfix p {
+  font-family: roboto;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+}

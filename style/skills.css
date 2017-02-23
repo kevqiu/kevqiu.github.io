@@ -1,0 +1,128 @@
+.tab {
+    margin-top: 20px;
+    overflow: hidden;
+    border: 1px solid white;
+}
+
+.tab a {
+  float: left;
+  display: block;
+  padding: 14px 16px;
+
+  transition: 0.3s;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+
+  text-decoration: none;
+  font-family: lane;
+  font-size: 17px;
+  text-align: center;
+  border-right: 1px solid white;
+}
+
+.tab a:focus, .active {
+    color: black;
+    background-color: white;
+}
+
+a:hover:not(.active) {
+    color: white;
+    background-color: #4c4c4c;
+}
+
+.tabcontent {
+  position: relative;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-top: none;
+  min-height: 280px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  font-family: lane;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.skills-table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.skills-table tr {
+  height: 65px;
+}
+
+.skills-table th {
+  padding-left: 10px;
+  text-align: center;
+}
+
+.skills-table td {
+  height: 40px;
+  width: 50%;
+  text-align: left;
+}
+
+.skills-table h3 {
+  font-family: lane;
+  font-size: 22px;
+  margin: 4px 0px 5px 18px;
+  letter-spacing: 0.05em;
+}
+
+.skills-table h4 {
+  font-family: lane;
+  font-size: 17px;
+  margin: 4px 0px 5px 20px;
+  letter-spacing: 0.05em;
+}
+
+.skills-table hr {
+  margin-left: 18px;
+}
+
+.progressbar {
+  background-color: black;
+  border-radius: 11px; /* (height of inner div) / 2 + padding */
+  padding: 3px;
+  border: 0.5px rgba(255, 255, 255, .5) solid;
+  width: 90%;
+  margin: 0 auto 15px;
+}
+
+.progress-1 {
+  background-color: #00b3b3;
+  width: 25%;
+  height: 16px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.progress-2 {
+  background-color: #00b3b3;
+  width: 50%;
+  height: 16px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.progress-3 {
+  background-color: #00b3b3;
+  width: 75%;
+  height: 16px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.progress-4 {
+  background-color: #00b3b3;
+  width: 100%;
+  height: 16px;
+  border-radius: 10px;
+}

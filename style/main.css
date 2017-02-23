@@ -93,19 +93,19 @@ canvas {
 }
 
 .menu-button {
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border: 1px solid #ffffff;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  border: 1px solid #ffffff;
   outline: none;
 
   background-color: Transparent;
-	color: #ffffff;
+  color: #ffffff;
   font-family: lane;
   letter-spacing: 2px;
 
-	padding-top: 12px;
-	padding-bottom: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   width: 120px;
 }
 
@@ -146,7 +146,7 @@ canvas {
   opacity: 0.9;
 }
 
-h1 {
+#container h1 {
   opacity: 0;
   -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
   animation: fadein 2s forwards;
@@ -158,7 +158,7 @@ h1 {
   text-align: center;
 }
 
-h2 {
+#container h2 {
   font-family: biko;
   font-size: 30px;
   font-weight: 10;
@@ -166,7 +166,7 @@ h2 {
   text-align: center;
 }
 
-h3 {
+#container h3 {
   opacity: 0;
   -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
   animation: fadein 2s forwards;
@@ -176,12 +176,4 @@ h3 {
   font-weight: 100;
   letter-spacing: 4px;
   text-align: center;
-}
-
-p {
-  font-family: roboto;
-  font-weight: 200;
-  font-size: 15px;
-  line-height: 160%;
-  letter-spacing: 0.2px;
 }

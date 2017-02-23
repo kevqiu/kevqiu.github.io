@@ -15,7 +15,7 @@
 .modal-content {
     background-color: rgba(0,0,0,0.75);
     margin: 7% auto;
-    padding: 20px 40px 40px;
+    padding: 20px 30px 30px;
     max-width: 675px;
     width: 60%;
 }
@@ -23,7 +23,7 @@
 /* The Close Button */
 .close {
     color: #aaa;
-    margin-top: -15px;
+    margin: -15px -10px;
     float: right;
     font-size: 40px;
     font-weight: bold;
@@ -34,4 +34,12 @@
     color: white;
     text-decoration: none;
     cursor: default;
+}
+
+.modal h2 {
+  font-family: biko;
+  font-size: 30px;
+  font-weight: 10;
+  letter-spacing: 0.15em;
+  text-align: left;
 }
