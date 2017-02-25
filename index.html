@@ -17,9 +17,9 @@
             <div id="background-image"></div>
         </div>
 
-        <div id="aboutModal" class="modal">
+        <div id="aboutModal" class="parent-modal">
           <div id="aboutModalContent" class="modal-content">
-            <span class="close" id="aboutClose" onclick="closeModal('aboutModal')">&times;</span>
+            <span class="close" id="aboutClose" onclick="closeModal('aboutModal','container')">&times;</span>
             <h2>ABOUT ME</h2>
             <hr/>
             <div class="clearfix">
@@ -47,9 +47,9 @@
           </div>
         </div>
 
-        <div id="skillsModal" class="modal">
+        <div id="skillsModal" class="parent-modal">
           <div id="skillsModalContent" class="modal-content">
-            <span class="close" id="skillsClose" onclick="closeModal('skillsModal')">&times;</span>
+            <span class="close" id="skillsClose" onclick="closeModal('skillsModal','container')">&times;</span>
             <h2>SKILLS</h2>
             <hr/>
             <div class="tab">
@@ -59,109 +59,27 @@
                 <td><a class="tablinks" onclick="openTab(event, 'Tools')">TOOLS</a>
             </div>
 
-            <div id="Programming" class="tabcontent">
-                <table class="skills-table">
-                    <tr>
-                        <td><h4>C#</h4><div class="progressbar"><div class="progress-4"></div></div></td>
-                        <td><h4>Android (Java)</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Java</h4><div class="progressbar"><div class="progress-2"></div></div></td>
-                        <td><h4>C</h4><div class="progressbar"><div class="progress-2"></div></div></td>
-                    </tr>
-                    <tr>
-                        <td><h4>C++</h4><div class="progressbar"><div class="progress-1"></div></div></td>
-                        <td><h4>SQL</h4><div class="progressbar"><div class="progress-1"></div></div></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Python</h4><div class="progressbar"><div class="progress-1"></div></div></td>
-                    </tr>
-                </table>
-            </div>
-
-            <div id="Web-Dev" class="tabcontent">
-                <table class="skills-table">
-                    <tr>
-                        <td><h4>HTML(5)</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                        <td><h4>CSS</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                    </tr>
-                    <tr>
-                        <td><h4>AngularJS</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                        <td><h4>JavaScript</h4><div class="progressbar"><div class="progress-2"></div></div></td>
-                    </tr>
-                    <tr>
-                        <td><h4>ReactJS</h4><div class="progressbar"><div class="progress-1"></div></div></td>
-                        <td><h4>NodeJS</h4><div class="progressbar"><div class="progress-1"></div></div></td>
-                    </tr>
-                </table>
-                <div id="footer">This site was custom built by me.</div>
-            </div>
-
-            <div id="Hardware" class="tabcontent">
-                <table class="skills-table">
-                    <tr>
-                        <td><h4>Arduino</h4><div class="progressbar"><div class="progress-4"></div></div></td>
-                        <td><h4>Verilog</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Assembly (ARM, x86)</h4><div class="progressbar"><div class="progress-2"></div></div></td>
-                    </tr>
-                </table>
-            </div>
-
-            <div id="Tools" class="tabcontent">
-                <table class="skills-table">
-                    <tr><td colspan=2><h3>IDEs & Text Editors</h3><hr align="left" style="width:225px"/></td></tr>
-                    <tr>
-                        <td><h4>Visual Studio</h4><div class="progressbar"><div class="progress-4"></div></div></td>
-                        <td><h4>Eclipse</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Android Studio</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                        <td><h4>Atom</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Notepad++</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                    </tr>
-                    <tr><td colspan=2><h3>Programming Tools</h3><hr align="left" style="width:225px"/></td></tr>
-                    <tr>
-                        <td><h4>Git</h4><div class="progressbar"><div class="progress-4"></div></div></td>
-                        <td><h4>Postman</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                    </tr>
-                    <tr>
-                        <td><h4>PowerShell</h4><div class="progressbar"><div class="progress-1"></div></div></td>
-                    </tr>
-                    <tr><td colspan=2><h3>Documentation</h3><hr align="left" style="width:180px"/></td></tr>
-                    <tr>
-                        <td><h4>LaTeX</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                        <td><h4>MATLAB</h4><div class="progressbar"><div class="progress-2"></div></div></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Microsoft Office</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                    </tr>
-                    <tr><td colspan=2><h3>Hardware</h3><hr align="left" style="width:120px"/></td></tr>
-                    <tr>
-                        <td><h4>Quartus II</h4><div class="progressbar"><div class="progress-3"></div></div></td>
-                    </tr>
-                    <tr>
-                    </tr>
-                </table>
+            <div id="skills-container">
+                <div id="Programming" class="tabcontent"></div>
+                <div id="Web-Dev" class="tabcontent"><div id="footer">This site was custom built by me.</div></div>
+                <div id="Hardware" class="tabcontent"></div>
+                <div id="Tools" class="tabcontent"></div>
             </div>
           </div>
         </div>
 
-        <div id="resumeModal" class="modal">
+        <div id="resumeModal" class="parent-modal">
           <div id="resumeModalContent" class="modal-content">
-            <span class="close" id="resumeClose" onclick="closeModal('resumeModal')">&times;</span>
+            <span class="close" id="resumeClose" onclick="openModal('contactModal','container')">&times;</span>
             <h2>RESUME</h2>
             <hr/>
             <p>Under construction! 🔧</p>
           </div>
         </div>
 
-        <div id="contactModal" class="modal">
+        <div id="contactModal" class="parent-modal">
           <div id="contactModalContent" class="modal-content">
-            <span class="close" id="contactClose" onclick="closeModal('contactModal')">&times;</span>
+            <span class="close" id="contactClose" onclick="closeModal('contactModal','container')">&times;</span>
             <h2>CONTACT</h2>
             <hr/>
             <p> Under construction! 🔧</p>
@@ -176,10 +94,10 @@
                 <h3>University of British Columbia</h3>
                 <canvas id="lower-line"></canvas>
                 <table class="button-table">
-                    <td><button type="button" class="menu-button" id="aboutBtn" onclick="openModal('aboutModal')">ABOUT</button></td>
-                    <td><button type="button" class="menu-button" id="skillsBtn" onclick="openModal('skillsModal')">SKILLS</button></td>
-                    <td><button type="button" class="menu-button" id="resumeBtn" onclick="openModal('resumeModal')">RESUME</button></td>
-                    <td><button type="button" class="menu-button" id="contactBtn" onclick="openModal('contactModal')">CONTACT</button></td>
+                    <td><button type="button" class="menu-button" id="aboutBtn" onclick="openModal('aboutModal','container')">ABOUT</button></td>
+                    <td><button type="button" class="menu-button" id="skillsBtn" onclick="openModal('skillsModal','container')">SKILLS</button></td>
+                    <td><button type="button" class="menu-button" id="resumeBtn" onclick="openModal('resumeModal','container')">RESUME</button></td>
+                    <td><button type="button" class="menu-button" id="contactBtn" onclick="openModal('contactModal','container')">CONTACT</button></td>
                 </table>
                 <br style="line-height:30px;">
                 <table class="icon-row">

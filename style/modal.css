@@ -1,5 +1,5 @@
 /* The Modal (background) */
-.modal {
+.parent-modal, .resume-modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 2; /* Sit on top */
@@ -36,7 +36,7 @@
     cursor: default;
 }
 
-.modal h2 {
+.parent-modal h2, .resume-modal h2 {
   font-family: biko;
   font-size: 30px;
   font-weight: 10;
