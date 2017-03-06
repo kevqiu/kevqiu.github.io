@@ -1,5 +1,5 @@
 /* The Modal (background) */
-.parent-modal, .resume-modal {
+.modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 2; /* Sit on top */
@@ -14,9 +14,9 @@
 /* Modal Content/Box */
 .modal-content {
     background-color: rgba(0,0,0,0.75);
-    margin: 7% auto;
+    margin: 4% auto;
     padding: 20px 30px 30px;
-    max-width: 675px;
+    max-width: 725px;
     width: 60%;
 }
 
@@ -36,9 +36,9 @@
     cursor: default;
 }
 
-.parent-modal h2, .resume-modal h2 {
-  font-family: biko;
-  font-size: 30px;
+.modal h2 {
+  font-family: universalis;
+  font-size: 32px;
   font-weight: 10;
   letter-spacing: 0.15em;
   text-align: left;

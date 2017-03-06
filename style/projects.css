@@ -1,0 +1,32 @@
+.project-row {
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+}
+
+.project {
+  width: 43%;
+  min-height: 3.5em;
+  background-color: white;
+  margin: 20px 15px 0 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.project:hover {
+  position: relative;
+  top: 3px;
+}
+
+.project > img {
+  width:100%;
+}
+
+
+.project-text {
+  color: black;
+  font-family: roboto;
+  font-size: 13px;
+  padding: 0 15px;
+  text-align: left;
+}

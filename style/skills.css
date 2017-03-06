@@ -78,7 +78,7 @@ a:hover:not(.active) {
 
 .skills-table h3 {
   font-family: lane;
-  font-size: 22px;
+  font-size: 24px;
   margin: 4px 0px 0px 0px;
   letter-spacing: 0.05em;
   text-align: center;
@@ -128,32 +128,33 @@ a:hover:not(.active) {
 }
 
 .tooltip {
-    visibility: hidden;
-    width: 100px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    font-family: roboto;
-    border: 1px rgba(255, 255, 255, .5) solid;
-    border-radius: 3px;
-    padding: 5px 2px 2px;
-    position: absolute;
-    z-index: 1;
-    top: 130%;
-    left: 50%;
-    margin-left: -52px;
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  font-family: roboto;
+  font-size: 14px;
+  border: 1px rgba(255, 255, 255, .5) solid;
+  border-radius: 3px;
+  padding: 5px 2px 2px;
+  position: absolute;
+  z-index: 1;
+  top: 130%;
+  left: 50%;
+  margin-left: -52px;
 }
 
 .tooltip::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-bottom: 1px;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent rgba(255, 255, 255, .5) transparent;
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 1px;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(255, 255, 255, .5) transparent;
 }
 
 .progressbar-container:hover .tooltip {

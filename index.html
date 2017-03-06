@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="style/animations.css">
         <link rel="stylesheet" href="style/about.css">
         <link rel="stylesheet" href="style/skills.css">
+        <link rel="stylesheet" href="style/projects.css">
+        <link rel="stylesheet" href="style/resume.css">
         <link rel="stylesheet" href="style/mobile.css">
         <link rel="icon" href="images/k.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +19,7 @@
             <div id="background-image"></div>
         </div>
 
-        <div id="aboutModal" class="parent-modal">
+        <div id="aboutModal" class="modal">
           <div id="aboutModalContent" class="modal-content">
             <span class="close" id="aboutClose" onclick="closeModal('aboutModal','container')">&times;</span>
             <h2>ABOUT ME</h2>
@@ -28,7 +30,7 @@
                     My name is Kevin Qiu and I am third year Computer Engineering student studying at
                     the University of Britsh Columbia. I am currently on a co-op work term at
                     <a href="https://www.visioncritical.com/" style="color:white">Vision Critical</a>
-                    working from Jan 2017 until Aug 2017 . <br><br/>
+                    working from Jan 2017 until the end of Aug 2017 . <br><br/>
 
                     A bit of history as to why I decided to go into Computer Engineering: as a kid
                     I was always interested in computers and technology in general. I enjoyed building
@@ -47,7 +49,7 @@
           </div>
         </div>
 
-        <div id="skillsModal" class="parent-modal">
+        <div id="skillsModal" class="modal">
           <div id="skillsModalContent" class="modal-content">
             <span class="close" id="skillsClose" onclick="closeModal('skillsModal','container')">&times;</span>
             <h2>SKILLS</h2>
@@ -68,16 +70,140 @@
           </div>
         </div>
 
-        <div id="resumeModal" class="parent-modal">
-          <div id="resumeModalContent" class="modal-content">
-            <span class="close" id="resumeClose" onclick="openModal('contactModal','container')">&times;</span>
-            <h2>RESUME</h2>
+        <div id="projectsModal" class="modal">
+          <div id="projectsModalContent" class="modal-content">
+            <span class="close" id="projectsClose" onclick="closeModal('projectsModal','container')">&times;</span>
+            <h2>PROJECTS</h2>
             <hr/>
-            <p>Under construction! 🔧</p>
+            <div class="project-row">
+                <div class="project" onclick="openProject('Mediasaurus')">
+                    <img src="images/mediasaurus-mock.jpg"/>
+                    <div class="project-text">
+                        <p><b>Mediasaurus</b> A media recommendation engine built as a web application
+                        constructed using the MEAN stack. </p>
+                    </div>
+                </div>
+                <div class="project" onclick="openProject('HomeSecurity')">
+                    <img src="images/homesecurity.jpg"/>
+                    <div class="project-text">
+                        <p><b>Home Security System</b> IoT-based design studio project built using Arduinos, a Raspberry Pi,
+                        and various sensors along with a companion Android application for control. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-row">
+                <div class="project" onclick="openProject('FoodScrambler')">
+                    <img src="images/foodscrambler-mock.jpg"/>
+                    <div class="project-text">
+                        <p><b>Food Scrambler</b> An entry-level Android application project to help users
+                        randomly select restaurants and food to eat. </p>
+                    </div>
+                </div>
+                <div class="project" onclick="openProject('Robosavages')">
+                    <img src="images/robosavages.jpg"/>
+                    <div class="project-text">
+                        <p><b>VEX Robotics</b> Robosavages, a team where we built and programmed robots
+                        used to compete in local and international robotics tournaments.</p>
+                    </div>
+                </div>
+            </div>
           </div>
         </div>
 
-        <div id="contactModal" class="parent-modal">
+        <div id="resumeModal" class="modal">
+          <div id="resumeModalContent" class="modal-content">
+            <span class="close" id="resumeClose" onclick="closeModal('resumeModal','container')">&times;</span>
+            <h2>RESUME</h2>
+            <hr/>
+            <h3 class="resume-header">TECHNICAL WORK EXPERIENCE</h3>
+            <hr align="center" style="width: 50px;" />
+            <p class="resume-item">
+                <span class="resume-title">Vision Critical</span>
+                <span class="resume-timespan">Jan 2017 - Ongoing</span>
+                <br>
+                <span class="resume-item-description">Software Engineering Intern</span>
+                <span class="resume-location">Toronto, ON</span>
+            </p>
+            <ul class="resume-list">
+                <li>
+                    Developed and tested back-end software systems for the SaaS products of an industry leader
+                    in the cloud-based customer intelligence space using Web API oriented languages and tools
+                    such as C#, SQL, OracleDB, and Powershell
+                </li>
+                <li>
+                    Implemented core functionality and deployment systems of an identity provider
+                    which leveraged new web service technologies
+                </li>
+                <li>
+                    Constructed an internal tool using ASP.NET Web Forms to improve work efficiency of team members by consolidating
+                    all the endpoints of our systems into one easy-to-navigate UI
+                </li>
+                <li>
+                    Enhanced the team status monitor with React.js to display additional statisitics and graphs on pipelines
+                </li>
+                <li>
+                    Improved code coverage throughout each repository by constructing new
+                    unit, integration, and acceptance tests using Nunit
+                </li>
+            </ul>
+
+            <h3 class="resume-header">EDUCATION</h3>
+            <hr align="center" style="width: 50px;" />
+
+            <p class="resume-item">
+                <span class="resume-title">University of British Columbia</span>
+                <span class="resume-timespan">Sept 2014 - Ongoing</span>
+                <br>
+                <span class="resume-item-description">Bachelor of Applied Science - Computer Engineering</span>
+                <span class="resume-location">Exp. Grad: May 2019</span>
+            </p>
+            <ul class="resume-list">
+                <li><p class="course-name">CPEN</p><p class="course-number">321</p>Software Engineering (Java, MEAN Stack)</li>
+                <li><p class="course-name">CPEN</p><p class="course-number">311</p>Digital Systems Design (Verilog)</li>
+                <li><p class="course-name">CPSC</p><p class="course-number">221</p>Algorithms and Data Structures (C++)</li>
+                <li><p class="course-name">CPSC</p><p class="course-number">261</p>Computer Systems (C)</li>
+                <li><p class="course-name">CPEN</p><p class="course-number">221</p>Software Construction (Java)</li>
+                <li><p class="course-name">ELEC</p><p class="course-number">291</p>Computer Engineering Design Studio (Arduino, Java, MATLAB, Android)</li>
+                <li><p class="course-name">ELEC</p><p class="course-number">201</p>Circuit Analysis</li>
+                <li><p class="course-name">CPEN</p><p class="course-number">281</p>Technical Communication</li>
+            </ul>
+
+            <h3 class="resume-header">VOLUNTEER EXPERIENCE</h3>
+            <hr align="center" style="width: 50px;" />
+            <p class="resume-item">
+                <span class="resume-title">Penguin Robotics</span>
+                <span class="resume-timespan">Oct 2015 - Dec 2016</span>
+                <br>
+                <span class="resume-item-description">Co-Founder</span>
+            </p>
+            <ul class="resume-list">
+                <li>
+                    Setup and run high school VEX Robotics tournaments in the Lower Mainland, acting as a game referee, field manager, or technical judge
+                </li>
+                <li>
+                    Mentored a group of beginner robotics students in a programming workshop
+                </li>
+            </ul>
+            <p class="resume-item">
+                <span class="resume-title">St. John Ambulance</span>
+                <span class="resume-timespan">Jan 2015 - Apr 2015</span>
+                <br>
+                <span class="resume-item-description">Coach for Casuality Simulation Team</span>
+            </p>
+            <ul class="resume-list">
+                <li>
+                    Coached and managed a casualty simulation team of four; ran biweekly practices for four hours a week
+                </li>
+                <li>
+                    Developed individual team member’s performance and worked with the team to improve teamwork and communication skills,
+                    eventually leading the team to second place in a provincial tournament
+                </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div id="contactModal" class="modal">
           <div id="contactModalContent" class="modal-content">
             <span class="close" id="contactClose" onclick="closeModal('contactModal','container')">&times;</span>
             <h2>CONTACT</h2>
@@ -96,13 +222,14 @@
                 <table class="button-table">
                     <td><button type="button" class="menu-button" id="aboutBtn" onclick="openModal('aboutModal','container')">ABOUT</button></td>
                     <td><button type="button" class="menu-button" id="skillsBtn" onclick="openModal('skillsModal','container')">SKILLS</button></td>
+                    <td><button type="button" class="menu-button" id="projectsBtn" onclick="openModal('projectsModal','container')">PROJECTS</button></td>
                     <td><button type="button" class="menu-button" id="resumeBtn" onclick="openModal('resumeModal','container')">RESUME</button></td>
                     <td><button type="button" class="menu-button" id="contactBtn" onclick="openModal('contactModal','container')">CONTACT</button></td>
                 </table>
                 <br style="line-height:30px;">
                 <table class="icon-row">
                     <td>
-                        <a href="https://github.com/kevqiu"><img class="link-icon" src="images/github.png"/></a>
+                        <a href="https://github.com/kevqiu" class="link"><img class="link-icon" src="images/github.png"/></a>
                     </td>
                     <td>
                         <a href="https://www.linkedin.com/in/kevin-qiu-b673486a/"><img class="link-icon" src="images/linkedin.png"/></a>
@@ -112,5 +239,8 @@
         </div>
     </body>
     <!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script> -->
-    <script type="text/javascript" src="js/main.js" ></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/skills.js"></script>
+    <script type="text/javascript" src="js/projects.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
 </html>

@@ -1,0 +1,62 @@
+.resume-header {
+  font-family: lane;
+  font-size: 22px;
+  margin: 30px 0px 10px 0px;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.resume-item {
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+
+.resume-title {
+  font-family: lane;
+  font-size: 18px;
+  font-weight: bolder;
+  letter-spacing: 0.05em;
+}
+
+.resume-item-description {
+  font-family: lane;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.resume-timespan, .resume-location {
+  font-family: lane;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  float: right;
+}
+
+.resume-description {
+  font-family: roboto;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+}
+
+.resume-list {
+  font-family: roboto;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-left: 30px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+}
+
+.course-name {
+  display: inline-block;
+  width: 45px;
+  margin: 0;
+}
+.course-number {
+  display: inline-block;
+  width: 45px;
+  margin: 0;
+}
