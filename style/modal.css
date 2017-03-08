@@ -1,45 +1,54 @@
 /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 2; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+.modal, .project-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: rgba(0,0,0,0.75);
-    margin: 4% auto;
-    padding: 20px 30px 30px;
-    max-width: 725px;
-    width: 60%;
+  background-color: rgba(0,0,0,0.75);
+  margin: 4% auto;
+  padding: 20px 30px 30px;
+  max-width: 725px;
+  width: 60%;
+  overflow: hidden;
 }
 
 /* The Close Button */
 .close {
-    color: #aaa;
-    margin: -15px -10px;
-    float: right;
-    font-size: 40px;
-    font-weight: bold;
+  color: #aaa;
+  margin: -15px -10px;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: white;
-    text-decoration: none;
-    cursor: default;
+  color: white;
+  text-decoration: none;
+  cursor: default;
 }
 
-.modal h2 {
+.modal h2, .project-modal h2 {
   font-family: universalis;
   font-size: 32px;
   font-weight: 10;
   letter-spacing: 0.15em;
   text-align: left;
+}
+
+.modal-content > p {
+  font-family: roboto;
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
 }

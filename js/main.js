@@ -19,6 +19,9 @@ window.onclick = function(event) {
             fadeIn(document.getElementById('container'));
         }, 700);
     }
+    else if (element.classList.contains("project-modal")) {
+        closeSubModal(element.id, 'projectsModal');
+    }
 }
 
 function drawMainLines() {

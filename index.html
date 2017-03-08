@@ -21,7 +21,7 @@
 
         <div id="aboutModal" class="modal">
           <div id="aboutModalContent" class="modal-content">
-            <span class="close" id="aboutClose" onclick="closeModal('aboutModal','container')">&times;</span>
+            <span class="close" onclick="closeModal('aboutModal','container')">&times;</span>
             <h2>ABOUT ME</h2>
             <hr/>
             <div class="clearfix">
@@ -51,7 +51,7 @@
 
         <div id="skillsModal" class="modal">
           <div id="skillsModalContent" class="modal-content">
-            <span class="close" id="skillsClose" onclick="closeModal('skillsModal','container')">&times;</span>
+            <span class="close" onclick="closeModal('skillsModal','container')">&times;</span>
             <h2>SKILLS</h2>
             <hr/>
             <div class="tab">
@@ -72,37 +72,37 @@
 
         <div id="projectsModal" class="modal">
           <div id="projectsModalContent" class="modal-content">
-            <span class="close" id="projectsClose" onclick="closeModal('projectsModal','container')">&times;</span>
+            <span class="close" onclick="closeModal('projectsModal','container')">&times;</span>
             <h2>PROJECTS</h2>
             <hr/>
             <div class="project-row">
-                <div class="project" onclick="openProject('Mediasaurus')">
+                <div class="project" onclick="openSubModal('mediasaurusModal','projectsModal')">
                     <img src="images/mediasaurus-mock.jpg"/>
                     <div class="project-text">
-                        <p><b>Mediasaurus</b> A media recommendation engine built as a web application
+                        <p><b>Mediasaurus</b>&nbsp;&nbsp; A media recommendation engine built as a web application
                         constructed using the MEAN stack. </p>
                     </div>
                 </div>
-                <div class="project" onclick="openProject('HomeSecurity')">
+                <div class="project" onclick="openSubModal('homesecurityModal','projectsModal')">
                     <img src="images/homesecurity.jpg"/>
                     <div class="project-text">
-                        <p><b>Home Security System</b> IoT-based design studio project built using Arduinos, a Raspberry Pi,
-                        and various sensors along with a companion Android application for control. </p>
+                        <p><b>Home Security System</b>&nbsp;&nbsp; IoT-based project built using Arduinos,
+                        a Raspberry Pi, and sensors along with a companion Android application. </p>
                     </div>
                 </div>
             </div>
             <div class="project-row">
-                <div class="project" onclick="openProject('FoodScrambler')">
+                <div class="project" onclick="openSubModal('foodscramblerModal','projectsModal')">
                     <img src="images/foodscrambler-mock.jpg"/>
                     <div class="project-text">
-                        <p><b>Food Scrambler</b> An entry-level Android application project to help users
+                        <p><b>Food Scrambler</b>&nbsp;&nbsp; An entry-level Android application project to help users
                         randomly select restaurants and food to eat. </p>
                     </div>
                 </div>
-                <div class="project" onclick="openProject('Robosavages')">
+                <div class="project" onclick="openSubModal('vexModal','projectsModal')">
                     <img src="images/robosavages.jpg"/>
                     <div class="project-text">
-                        <p><b>VEX Robotics</b> Robosavages, a team where we built and programmed robots
+                        <p><b>VEX Robotics</b>&nbsp;&nbsp; Robosavages, a team where we built and programmed robots
                         used to compete in local and international robotics tournaments.</p>
                     </div>
                 </div>
@@ -110,9 +110,84 @@
           </div>
         </div>
 
+        <div id="mediasaurusModal" class="project-modal">
+          <div id="mediasaurusModalContent" class="modal-content">
+            <span class="close" onclick="closeSubModal('mediasaurusModal','projectsModal')">&times;</span>
+            <h2>MEDIASAURUS</h2>
+            <hr/>
+            <img class="project-image" src="images/mediasaurus-site.jpg" />
+            <p>
+                The inspiration and motiviation behind Mediasaurus came from the need to optimize
+                Netflix and TV time. People would spend countless minutes pondering which show or movie
+                to watch next when that precious time could be used for media consumption instead.
+                Mediasaurus helps solve this issue by recommending users movies depending on their genre
+                and movie preferences. Each user is catered with a personalized list of movies which
+                dynamically updates based off their recent 'likes'.
+                <br /><br />
+
+                This web application was built using the MEAN stack (MongoDB, Express.js, AngularJS, Node.js).
+                Our team of six decided on this tech stack because we wanted to use something modern and
+                the flexibility of this stack allowed us to realize our product. <br /><br />
+
+                My role on Mediasaurus was in front end development. I worked on setting up website structure,
+                designing UI/UX, implementing MVC, and integrating back end endpoints. The tools I used for these
+                tasks were HTML, CSS with Bootstrap, and AngularJS.
+            </p>
+          </div>
+        </div>
+
+        <div id="homesecurityModal" class="project-modal">
+          <div id="homesecurityModalContent" class="modal-content">
+            <span class="close" onclick="closeSubModal('homesecurityModal','projectsModal')">&times;</span>
+            <h2>HOME SECURITY SYSTEM</h2>
+            <hr/>
+            <img class="project-image" src="images/homesecurity.jpg" />
+            <p>
+                The Home Security System was built as my team's final Computer Engineering Design Studio Project.
+                The project utilized a combination of hardware and software to achieve an IoT-based system. <br /><br />
+
+                Using an array of sensors connected to a master-slave Arduino setup using I2C, we were able
+                to model a home security system with a door status checker, laser tripwires, motion detection,
+                alarms, and timed lighting. We created an Android application with a simple UI to allow us to
+                monitor, set, and trigger each individual component of the security system. Using a Raspberry Pi
+                as our central server, we were able to relay data between the Arduinos and the Android app. <br /><br />
+
+                I lead in the construction of the model house and the development of the Android application.
+                I was responsible for building the model house, selecting the sensor array, and wirnig everything
+                together. For the Android application I lead in designing the layout the UI and building the
+                core functionality for instruction handling and sending. <br /><br />
+
+                You can view some project photos and screenshots of the Android app
+                <a href="https://goo.gl/photos/YwnSYqSGwt1a4j1V6" style="color:white">here</a>.
+            </p>
+          </div>
+        </div>
+
+        <div id="foodscramblerModal" class="project-modal">
+          <div id="foodscramblerModalContent" class="modal-content">
+            <span class="close" onclick="closeSubModal('foodscramblerModal','projectsModal')">&times;</span>
+            <h2>FOOD SCRAMBLER</h2>
+            <hr/>
+            <img class="project-image-left" src="images/foodscrambler.png" />
+            <p>
+                The Food Scrambler Android application was created to help alleviate the pressure of
+                picking a restaurant to dine at or choosing something off a menu to eat.
+            </p>
+          </div>
+        </div>
+
+        <div id="vexModal" class="project-modal">
+          <div id="vexModalContent" class="modal-content">
+            <span class="close" onclick="closeSubModal('vexModal','projectsModal')">&times;</span>
+            <h2>VEX ROBOTICS</h2>
+            <hr/>
+            <p> Under construction! 🔧</p>
+          </div>
+        </div>
+
         <div id="resumeModal" class="modal">
           <div id="resumeModalContent" class="modal-content">
-            <span class="close" id="resumeClose" onclick="closeModal('resumeModal','container')">&times;</span>
+            <span class="close" onclick="closeModal('resumeModal','container')">&times;</span>
             <h2>RESUME</h2>
             <hr/>
             <h3 class="resume-header">TECHNICAL WORK EXPERIENCE</h3>
@@ -205,7 +280,7 @@
 
         <div id="contactModal" class="modal">
           <div id="contactModalContent" class="modal-content">
-            <span class="close" id="contactClose" onclick="closeModal('contactModal','container')">&times;</span>
+            <span class="close" onclick="closeModal('contactModal','container')">&times;</span>
             <h2>CONTACT</h2>
             <hr/>
             <p> Under construction! 🔧</p>
