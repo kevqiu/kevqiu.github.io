@@ -29,7 +29,7 @@
                 <p>
                     My name is Kevin Qiu and I am third year Computer Engineering student studying at
                     the University of Britsh Columbia. I am currently on a co-op work term at
-                    <a href="https://www.visioncritical.com/" style="color:white">Vision Critical</a>
+                    <a target="_blank" href="https://www.visioncritical.com/" style="color:white">Vision Critical</a>
                     working from Jan 2017 until the end of Aug 2017 . <br><br/>
 
                     A bit of history as to why I decided to go into Computer Engineering: as a kid
@@ -158,7 +158,7 @@
                 core functionality for instruction handling and sending. <br /><br />
 
                 You can view some project photos and screenshots of the Android app
-                <a href="https://goo.gl/photos/YwnSYqSGwt1a4j1V6" style="color:white">here</a>.
+                <a target="_blank" href="https://goo.gl/photos/YwnSYqSGwt1a4j1V6" style="color:white">here</a>.
             </p>
           </div>
         </div>
@@ -168,10 +168,17 @@
             <span class="close" onclick="closeSubModal('foodscramblerModal','projectsModal')">&times;</span>
             <h2>FOOD SCRAMBLER</h2>
             <hr/>
-            <img class="project-image-left" src="images/foodscrambler.png" />
+            <div class="project-app-container">
+                <img class="project-image-app" src="images/foodscrambler-1.png" />
+                <img class="project-image-app" src="images/foodscrambler-2.png" />
+            </div>
             <p>
                 The Food Scrambler Android application was created to help alleviate the pressure of
-                picking a restaurant to dine at or choosing something off a menu to eat.
+                picking a restaurant to dine at or choosing something off a menu to eat. Users can
+                enter a list of things they are considering and the app will handle the rest. <br /><br />
+
+                This was my first project in the Android space and it springboarded me into
+                the world of mobile development.
             </p>
           </div>
         </div>
@@ -181,7 +188,25 @@
             <span class="close" onclick="closeSubModal('vexModal','projectsModal')">&times;</span>
             <h2>VEX ROBOTICS</h2>
             <hr/>
-            <p> Under construction! 🔧</p>
+            <div class="video-wrapper">
+                <iframe id="vex-video" src='https://www.youtube.com/embed/0Ar2HtzPwFM?enablejsapi=1' frameborder='0' allowfullscreen></iframe>
+            </div>
+            <p>
+                The VEX Robotics platform exposes high school students to the world of STEM.
+                This system is used in a worldwide competition in which students design robots
+                to complete a yearly challenge. The VEX Robotics Competition offers students an
+                opportunity to work in a team-based environment that promotes hands-on experience
+                in mechatronics, teamwork, and leadership.  <br /><br />
+
+                By working through several design and prototyping iterations, my team and I were
+                able to assemble world-class robots which we used to compete at international levels.
+                Using C, we programmed the robots for remote operation and as well as autonomous
+                movement, which included dynamic sequences based on the state of game field. <br /><br />
+
+                You can view some robots I helped build
+                <a target="_blank" href="https://goo.gl/photos/MA7En2kH5fiQmcHf7" style="color:white">here</a>.
+
+            </p>
           </div>
         </div>
 
@@ -283,7 +308,9 @@
             <span class="close" onclick="closeModal('contactModal','container')">&times;</span>
             <h2>CONTACT</h2>
             <hr/>
-            <p> Under construction! 🔧</p>
+            <p style="margin-top:20px"> Email: kevinqiu96@gmail.com </p>
+            <p> GitHub: <a target="_blank" href="https://github.com/kevqiu" class="link" style="color:white">Here</a></p>
+            <p> LinkedIn: <a target="_blank" href="https://www.linkedin.com/in/kevin-qiu-b673486a" class="link" style="color:white">Here</a></p>
           </div>
         </div>
 
@@ -304,10 +331,10 @@
                 <br style="line-height:30px;">
                 <table class="icon-row">
                     <td>
-                        <a href="https://github.com/kevqiu" class="link"><img class="link-icon" src="images/github.png"/></a>
+                        <a target="_blank" href="https://github.com/kevqiu" class="link"><img class="link-icon" src="images/github.png"/></a>
                     </td>
                     <td>
-                        <a href="https://www.linkedin.com/in/kevin-qiu-b673486a/"><img class="link-icon" src="images/linkedin.png"/></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/kevin-qiu-b673486a"><img class="link-icon" src="images/linkedin.png"/></a>
                     </td>
                 </table>
             </div>
@@ -316,6 +343,5 @@
     <!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script> -->
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/skills.js"></script>
-    <script type="text/javascript" src="js/projects.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>
 </html>

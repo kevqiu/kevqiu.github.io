@@ -52,8 +52,11 @@ function closeSubModal(child, parent) {
         parentElement.classList.add('fade-in-modal');
         parentElement.getElementsByTagName('div')[0].classList.add('fade-in-content');
     }, 700);
+    if (child == 'vexModal') { // kill the video!!!
+        document.getElementById('vex-video')
+            .contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}','*');
+    }
 }
-
 
 function fadeIn(inElement) {
     inElement.classList.remove('fade-out');
