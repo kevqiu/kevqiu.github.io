@@ -11,6 +11,10 @@
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+.modal-line {
+    border-color: white;
+}
+
 /* Modal Content/Box */
 .modal-content {
   background-color: rgba(0,0,0,0.75);

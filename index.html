@@ -23,7 +23,7 @@
           <div id="aboutModalContent" class="modal-content">
             <span class="close" onclick="closeModal('aboutModal','container')">&times;</span>
             <h2>ABOUT ME</h2>
-            <hr/>
+            <hr class="modal-line"/>
             <div class="clearfix">
                 <img id="me" src="images/me.jpg"/>
                 <p>
@@ -53,7 +53,7 @@
           <div id="skillsModalContent" class="modal-content">
             <span class="close" onclick="closeModal('skillsModal','container')">&times;</span>
             <h2>SKILLS</h2>
-            <hr/>
+            <hr class="modal-line"/>
             <div class="tab">
                 <td><a class="tablinks" id="default-tab" onclick="openTab(event, 'Programming')">PROGRAMMING</a></td>
                 <td><a class="tablinks" onclick="openTab(event, 'Web-Dev')">WEB DEV</a>
@@ -74,7 +74,7 @@
           <div id="projectsModalContent" class="modal-content">
             <span class="close" onclick="closeModal('projectsModal','container')">&times;</span>
             <h2>PROJECTS</h2>
-            <hr/>
+            <hr class="modal-line"/>
             <div class="project-row">
                 <div class="project" onclick="openSubModal('mediasaurusModal','projectsModal')">
                     <img src="images/mediasaurus-mock.jpg"/>
@@ -114,7 +114,7 @@
           <div id="mediasaurusModalContent" class="modal-content">
             <span class="close" onclick="closeSubModal('mediasaurusModal','projectsModal')">&times;</span>
             <h2>MEDIASAURUS</h2>
-            <hr/>
+            <hr class="modal-line"/>
             <img class="project-image" src="images/mediasaurus-site.jpg" />
             <p>
                 The inspiration and motiviation behind Mediasaurus came from the need to optimize
@@ -140,7 +140,7 @@
           <div id="homesecurityModalContent" class="modal-content">
             <span class="close" onclick="closeSubModal('homesecurityModal','projectsModal')">&times;</span>
             <h2>HOME SECURITY SYSTEM</h2>
-            <hr/>
+            <hr class="modal-line"/>
             <img class="project-image" src="images/homesecurity.jpg" />
             <p>
                 The Home Security System was built as my team's final Computer Engineering Design Studio Project.
@@ -167,7 +167,7 @@
           <div id="foodscramblerModalContent" class="modal-content">
             <span class="close" onclick="closeSubModal('foodscramblerModal','projectsModal')">&times;</span>
             <h2>FOOD SCRAMBLER</h2>
-            <hr/>
+            <hr class="modal-line"/>
             <div class="project-app-container">
                 <img class="project-image-app" src="images/foodscrambler-1.png" />
                 <img class="project-image-app" src="images/foodscrambler-2.png" />
@@ -187,7 +187,7 @@
           <div id="vexModalContent" class="modal-content">
             <span class="close" onclick="closeSubModal('vexModal','projectsModal')">&times;</span>
             <h2>VEX ROBOTICS</h2>
-            <hr/>
+            <hr class="modal-line"/>
             <div class="video-wrapper">
                 <iframe id="vex-video" src='https://www.youtube.com/embed/0Ar2HtzPwFM?enablejsapi=1' frameborder='0' allowfullscreen></iframe>
             </div>
@@ -214,9 +214,9 @@
           <div id="resumeModalContent" class="modal-content">
             <span class="close" onclick="closeModal('resumeModal','container')">&times;</span>
             <h2>RESUME</h2>
-            <hr/>
-            <h3 class="resume-header">TECHNICAL WORK EXPERIENCE</h3>
-            <hr align="center" style="width: 50px;" />
+            <hr class="modal-line"/>
+            <h3 class="resume-header">Technical Work Experience</h3>
+            <hr class="resume-header-line" align="center"/>
             <p class="resume-item">
                 <span class="resume-title">Vision Critical</span>
                 <span class="resume-timespan">Jan 2017 - Ongoing</span>
@@ -247,8 +247,8 @@
                 </li>
             </ul>
 
-            <h3 class="resume-header">EDUCATION</h3>
-            <hr align="center" style="width: 50px;" />
+            <h3 class="resume-header">Education</h3>
+            <hr class="resume-header-line" align="center"/>
 
             <p class="resume-item">
                 <span class="resume-title">University of British Columbia</span>
@@ -268,8 +268,8 @@
                 <li><p class="course-name">CPEN</p><p class="course-number">281</p>Technical Communication</li>
             </ul>
 
-            <h3 class="resume-header">VOLUNTEER EXPERIENCE</h3>
-            <hr align="center" style="width: 50px;" />
+            <h3 class="resume-header">Volunteer Work</h3>
+            <hr class="resume-header-line" align="center"/>
             <p class="resume-item">
                 <span class="resume-title">Penguin Robotics</span>
                 <span class="resume-timespan">Oct 2015 - Dec 2016</span>
@@ -307,7 +307,7 @@
           <div id="contactModalContent" class="modal-content">
             <span class="close" onclick="closeModal('contactModal','container')">&times;</span>
             <h2>CONTACT</h2>
-            <hr/>
+            <hr class="modal-line"/>
             <p style="margin-top:20px"> Email: kevinqiu96@gmail.com </p>
             <p> GitHub: <a target="_blank" href="https://github.com/kevqiu" class="link" style="color:white">Here</a></p>
             <p> LinkedIn: <a target="_blank" href="https://www.linkedin.com/in/kevin-qiu-b673486a" class="link" style="color:white">Here</a></p>

@@ -65,15 +65,22 @@ a:hover:not(.active) {
 
 .skills-table h3 {
   font-family: lane;
-  font-size: 24px;
+  font-size: 21px;
   margin: 4px 0px 0px 0px;
   letter-spacing: 0.05em;
   text-align: center;
 }
 
+.dev-tools-header-line {
+  width: 50px;
+  margin-top: 5px;
+  border-color: #72dbd7;
+}
+
 .skills-table h4 {
   font-family: roboto;
   font-size: 16px;
+  font-weight: lighter;
   text-align: left;
   margin: 4px 0px 5px 14px;
   letter-spacing: 0.05em;

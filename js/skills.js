@@ -104,7 +104,7 @@ function createProgressBars() {
                 label.innerText = values[skill];
 
                 var line = document.createElement("hr");
-                line.style.width = "50px";
+                line.classList.add("dev-tools-header-line");
 
                 td.appendChild(label);
                 td.appendChild(line);
