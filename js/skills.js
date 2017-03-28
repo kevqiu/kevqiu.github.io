@@ -38,13 +38,13 @@ var toolsSkills = {
     "HEADER-4": "Hardware",
     "Quartus II": 3
 };
-var expertise = ["Beginner", "Comfortable", "Proficient", "Mastered"];
+var expertise = ["Fundamentals", "Intermediate", "Proficient", "Advanced", "Mastered"];
 
 var skillsDict = {
     "Programming": programmingSkills,
     "Web-Dev": webdevSkills,
     "Hardware": hardwareSkills,
-    "Tools": toolsSkills
+    "Dev-Tools": toolsSkills
 };
 
 function createProgressBars() {
@@ -53,11 +53,10 @@ function createProgressBars() {
         var table = document.createElement("table");
         table.classList.add("skills-table");
         var values = skillsDict[key];
-        var tr = document.createElement("tr");
-        var i = 0;
         for (skill in values) {
             if(!skill.includes("HEADER"))
             {
+                var tr = document.createElement("tr");
                 var td = document.createElement("td");
                 td.classList.add("stat");
 
@@ -69,7 +68,7 @@ function createProgressBars() {
 
                 var progBar = document.createElement("div");
             	progBar.classList.add("progressbar");
-                progBar.style.width = (values[skill] * 25) + "%";
+                progBar.style.width = (values[skill] * 20) + "%";
                 progBar.style.borderTopLeftRadius = "3px";
                 progBar.style.borderBottomLeftRadius = "3px";
                 if(values[skill] == 4) {
@@ -79,9 +78,9 @@ function createProgressBars() {
 
         	    var verticalBars = document.createElement("table");
                 verticalBars.classList.add("vertical-lines");
-            	for(var j = 0; j < 4; j++) {
+            	for(var j = 0; j < 5; j++) { // add 5 dividing lines
                   	var bar = document.createElement("td")
-                    if(j != 3) bar.classList.add("line");
+                    if(j != 4) bar.classList.add("line");
                   	verticalBars.appendChild(bar);
                 }
 
@@ -96,16 +95,10 @@ function createProgressBars() {
                 td.appendChild(progBarContainer);
                 tr.appendChild(td);
                 table.appendChild(tr);
-
-                if(++i == 2) { // make new row if count gets to 2
-                    i = 0;
-                    tr = document.createElement("tr");
-                }
             }
-            else {
-                tr = document.createElement("tr");
+            else { // else for headers
+                var tr = document.createElement("tr");
                 var td = document.createElement("td");
-                td.colSpan = 2;
 
                 var label = document.createElement("h3");
                 label.innerText = values[skill];
@@ -117,9 +110,6 @@ function createProgressBars() {
                 td.appendChild(line);
                 tr.appendChild(td);
                 table.appendChild(tr);
-
-                i = 0;
-                tr = document.createElement("tr");
             }
         }
         tab.appendChild(table);

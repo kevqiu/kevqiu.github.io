@@ -175,3 +175,17 @@ canvas {
   letter-spacing: 4px;
   text-align: center;
 }
+
+#footer {
+  opacity: 0;
+  -webkit-animation: fadeinhalf 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadeinhalf 2s forwards;
+  -webkit-animation-delay: 3s; /* Chrome, Safari, Opera */
+  animation-delay: 3s;
+
+  margin: 30px auto 10px;
+  font-family: lane;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}

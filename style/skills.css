@@ -36,25 +36,12 @@ a:hover:not(.active) {
   border: 1px solid white;
   border-top: none;
   padding: 10px 12px;
-  min-height: 280px;
 }
 
 .tabcontent {
   display: none;
   -webkit-animation: fadein 1s forwards; /* Safari, Chrome and Opera > 12.1 */
   animation: fadein 1s forwards;
-}
-
-#footer {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  margin: 0 auto;
-  width: 100%;
-  font-family: lane;
-  font-size: 12px;
-  text-align: center;
-  letter-spacing: 0.05em;
 }
 
 .skills-table {
@@ -119,7 +106,7 @@ a:hover:not(.active) {
 .line {
   border-right: 1px rgba(255, 255, 255, .5) solid;
   height: 21px;
-  width: 25%;
+  width: 20%;
 }
 
 .progressbar {

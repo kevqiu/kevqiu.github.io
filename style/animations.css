@@ -13,6 +13,21 @@
     to   { opacity: 1; }
 }
 
+@keyframes fadeinhalf {
+    from { opacity: 0; }
+    to   { opacity: 0.5; }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadeinhalf {
+    from { opacity: 0; }
+    to   { opacity: 0.5; }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeinhalf {
+    from { opacity: 0; }
+    to   { opacity: 0.5; }
+}
+
 @keyframes fadeinContainer {
     from { opacity: 0; -webkit-transform: scale(0.95); -webkit-filter: blur(6px);}
     to   { opacity: 1; -webkit-transform: scale(1); -webkit-filter: blur(0px);}
