@@ -9,6 +9,7 @@ window.onload = function() {
     document.getElementById('default-tab').click();
     drawMainLines();
     createProgressBars();
+    createToolsLists();
 }
 
 window.onclick = function(event) {

@@ -1,10 +1,10 @@
 var programmingSkills = {
     "C#": 4,
-    "Android (Java)": 3,
-    "Java": 2,
-    "C": 2,
+    "Android": 3,
+    "Java": 3,
+    "C": 3,
+    "SQL": 2,
     "C++": 1,
-    "SQL": 1,
     "Python": 1,
 };
 var webdevSkills = {
@@ -20,31 +20,33 @@ var hardwareSkills = {
     "Verilog": 3,
     "Assembly (ARM, x86)": 2
 };
-var toolsSkills = {
-    "HEADER-1": "IDEs & Text Editors",
-    "Visual Studio": 4,
-    "Eclipse": 3,
-    "Android Studio": 3,
-    "Atom": 3,
-    "Notepad++": 3,
-    "HEADER-2": "Programming Tools",
-    "Git": 3,
-    "Postman": 2,
-    "Powershell": 1,
-    "HEADER-3": "Documentation",
-    "LaTeX": 3,
-    "MATLAB": 2,
-    "Microsoft Office": 3,
-    "HEADER-4": "Hardware",
-    "Quartus II": 3
-};
+
+var tools = [
+    "HEADER-IDEs & Text Editors",
+    "Visual Studio",
+    "Eclipse",
+    "Android Studio",
+    "Atom",
+    "Notepad++",
+    "HEADER-Programming Tools",
+    "Git",
+    "Postman",
+    "SQL Developer",
+    "Powershell",
+    "HEADER-Documentation",
+    "LaTeX",
+    "MATLAB",
+    "Microsoft Office",
+    "HEADER-Hardware",
+    "Quartus II"
+];
+
 var expertise = ["Fundamentals", "Intermediate", "Proficient", "Advanced", "Mastered"];
 
 var skillsDict = {
     "Programming": programmingSkills,
     "Web-Dev": webdevSkills,
     "Hardware": hardwareSkills,
-    "Dev-Tools": toolsSkills
 };
 
 function createProgressBars() {
@@ -54,8 +56,7 @@ function createProgressBars() {
         table.classList.add("skills-table");
         var values = skillsDict[key];
         for (skill in values) {
-            if(!skill.includes("HEADER"))
-            {
+            if(!skill.includes("HEADER")) {
                 var tr = document.createElement("tr");
                 var td = document.createElement("td");
                 td.classList.add("stat");
@@ -114,6 +115,44 @@ function createProgressBars() {
         }
         tab.appendChild(table);
     }
+}
+
+function createToolsLists() {
+    var tab = document.getElementById("Dev-Tools");
+    var table = document.createElement("table");
+    table.classList.add("skills-table");
+    var tr = document.createElement("tr");
+    var list = document.createElement("ul");
+    list.classList.add("tools-list");
+    for (var i = 0; i < tools.length; i++) {
+        if(!tools[i].includes("HEADER-")) {
+            var item = document.createElement("ul");
+            item.innerText = tools[i];
+            item.classList.add("tools-list-item");
+            list.appendChild(item);
+        }
+        else {
+            if(list.firstChild) {
+                tr.appendChild(list);
+            }
+
+            tr = document.createElement("tr");
+
+            var label = document.createElement("h3");
+            label.innerText = tools[i].replace("HEADER-", "");
+            var line = document.createElement("hr");
+            line.classList.add("dev-tools-header-line");
+
+            tr.appendChild(label);
+            tr.appendChild(line);
+            table.appendChild(tr);
+
+            list = document.createElement("ul"); // make new list
+            list.classList.add("tools-list");
+        }
+    }
+    tr.appendChild(list); // append final list to the row
+    tab.appendChild(table);
 }
 
 function openTab(evt, tab) {

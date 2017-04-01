@@ -24,6 +24,7 @@
 .tab a:focus, .active {
     color: black;
     background-color: white;
+    font-weight: bold;
 }
 
 a:hover:not(.active) {
@@ -152,5 +153,26 @@ a:hover:not(.active) {
 }
 
 .progressbar-container:hover .tooltip {
-    visibility: visible;
+  visibility: visible;
+}
+
+.tools-list {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: roboto;
+  font-weight: bold;
+  padding: 0;
+  max-width: 800px;
+}
+
+.tools-list-item {
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 10px;
+  color: #374054;
+  background: #e4e4ea;
+  list-style: none;
+  cursor: default;
+  font-size: 1.1em;
 }
