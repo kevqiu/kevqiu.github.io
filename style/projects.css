@@ -28,6 +28,7 @@
   font-size: 13px;
   padding: 0 15px;
   text-align: left;
+  cursor: default;
 }
 
 .project-image {

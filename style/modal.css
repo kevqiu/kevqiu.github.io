@@ -47,6 +47,7 @@
   font-weight: 10;
   letter-spacing: 0.15em;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .modal-content > p {

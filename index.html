@@ -1,359 +1,401 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Kevin Qiu</title>
-        <link rel="stylesheet" href="style/main.css">
-        <link rel="stylesheet" href="style/modal.css">
-        <link rel="stylesheet" href="style/animations.css">
-        <link rel="stylesheet" href="style/about.css">
-        <link rel="stylesheet" href="style/skills.css">
-        <link rel="stylesheet" href="style/projects.css">
-        <link rel="stylesheet" href="style/resume.css">
-        <link rel="stylesheet" href="style/mobile.css">
-        <link rel="icon" href="images/k.ico">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-99304536-1', 'auto');
-          ga('send', 'pageview');
-        </script>
-    </head>
+<head>
+  <title>Kevin Qiu</title>
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/modal.css">
+  <link rel="stylesheet" href="style/animations.css">
+  <link rel="stylesheet" href="style/about.css">
+  <link rel="stylesheet" href="style/skills.css">
+  <link rel="stylesheet" href="style/projects.css">
+  <link rel="stylesheet" href="style/resume.css">
+  <link rel="stylesheet" href="style/mobile.css">
+  <link rel="icon" href="images/k.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="js/ga.js"></script>
+</head>
 
-    <body>
-        <div id="background">
-            <div id="background-image"></div>
-        </div>
+<body>
+  <div id="background">
+    <div id="background-image"></div>
+  </div>
 
-        <div id="aboutModal" class="modal">
-          <div id="aboutModalContent" class="modal-content">
-            <span class="close" onclick="closeModal('aboutModal','container')">&times;</span>
-            <h2>ABOUT ME</h2>
-            <hr class="modal-line"/>
-            <div class="clearfix">
-                <img id="me" src="images/me.jpg"/>
-                <p>
-                    My name is Kevin Qiu and I am third year Computer Engineering student studying at
-                    the University of Britsh Columbia. I am currently on a co-op work term at
-                    <a target="_blank" href="https://www.visioncritical.com/" style="color:white">Vision Critical</a>
-                    working from Jan 2017 until the end of Aug 2017 . <br><br/>
+  <div id="aboutModal" class="modal">
+    <div id="aboutModalContent" class="modal-content">
+      <span class="close" onclick="closeModal('aboutModal','container')">&times;</span>
+      <h2>About Me</h2>
+      <hr class="modal-line" />
+      <div class="clearfix">
+        <img id="me" src="images/me.jpg" />
+        <p>
+          My name is Kevin Qiu and I am third year Computer Engineering student studying at the University of Britsh Columbia. I am currently on a co-op work term at
+          <a target="_blank" href="https://www.visioncritical.com/" style="color:white">Vision Critical</a> working from Jan 2017 until the end of Aug 2017. <br><br> A bit of history as to why I decided to go into Computer Engineering: as a kid I was
+          always interested in computers and technology in general. I enjoyed building things, whether it be with LEGO or in a video game, and had a knack for coming up with the strangest creations. In high school, I was part of a world-class VEX Robotics
+          team, the Robosavages of Gladstone Secondary School. This was my first glimpse into the world of programming and I instantly fell in love with the idea of bringing something I built to life with code. <br><br> Some of my hobbies include collecting
+          and building keyboards, tinkering with hardware, and exploring cities for the best food out there. I'm passionate about games, both video and board alike, and I like to admire the work that goes into creating them. I also enjoy hiking and exploring
+          nature whenever I get the chance to.
+        </p>
+      </div>
+    </div>
+  </div>
 
-                    A bit of history as to why I decided to go into Computer Engineering: as a kid
-                    I was always interested in computers and technology in general. I enjoyed building
-                    things, whether it be with LEGO or in a video game, and had a knack for coming up
-                    with the strangest creations. In high school, I was part of a world-class VEX Robotics team,
-                    the Robosavages of Gladstone Secondary School. This was my first glimpse into the world
-                    of programming and I instantly fell in love with the idea of bringing something I
-                    built to life with code. <br><br/>
+  <div id="skillsModal" class="modal">
+    <div id="skillsModalContent" class="modal-content">
+      <span class="close" onclick="closeModal('skillsModal','container')">&times;</span>
+      <h2>Skills</h2>
+      <hr class="modal-line" />
+      <div class="tab">
+        <td><a class="tablinks" id="default-tab" onclick="openTab(event, 'Programming')">PROGRAMMING</a>
+        </td>
+        <td><a class="tablinks" onclick="openTab(event, 'Web-Dev')">WEB DEV</a>
+          <td><a class="tablinks" onclick="openTab(event, 'Hardware')">HARDWARE</a>
+            <td><a class="tablinks" onclick="openTab(event, 'Dev-Tools')">DEV TOOLS</a>
+      </div>
 
-                    Some of my hobbies include collecting and building keyboards, tinkering with hardware,
-                    and exploring cities for the best food out there. I'm passionate about games, both video
-                    and board alike, and I like to admire the work that goes into creating them.
-                    I also enjoy hiking and exploring nature whenever I get the chance to.
-                </p>
-            </div>
+      <div id="skills-container">
+        <div id="Programming" class="tabcontent"></div>
+        <div id="Web-Dev" class="tabcontent"></div>
+        <div id="Hardware" class="tabcontent"></div>
+        <div id="Dev-Tools" class="tabcontent"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="projectsModal" class="modal">
+    <div id="projectsModalContent" class="modal-content">
+      <span class="close" onclick="closeModal('projectsModal','container')">&times;</span>
+      <h2>Projects</h2>
+      <hr class="modal-line" />
+      <div class="project-row">
+        <div class="project" onclick="openSubModal('mediasaurusModal','projectsModal')">
+          <img src="images/project-cards/mediasaurus-mock.jpg" />
+          <div class="project-text">
+            <p><b>Mediasaurus</b>&nbsp;&nbsp; A media recommendation engine built as a web application constructed using the MEAN stack. </p>
           </div>
         </div>
-
-        <div id="skillsModal" class="modal">
-          <div id="skillsModalContent" class="modal-content">
-            <span class="close" onclick="closeModal('skillsModal','container')">&times;</span>
-            <h2>SKILLS</h2>
-            <hr class="modal-line"/>
-            <div class="tab">
-                <td><a class="tablinks" id="default-tab" onclick="openTab(event, 'Programming')">PROGRAMMING</a></td>
-                <td><a class="tablinks" onclick="openTab(event, 'Web-Dev')">WEB DEV</a>
-                <td><a class="tablinks" onclick="openTab(event, 'Hardware')">HARDWARE</a>
-                <td><a class="tablinks" onclick="openTab(event, 'Dev-Tools')">DEV TOOLS</a>
-            </div>
-
-            <div id="skills-container">
-                <div id="Programming" class="tabcontent"></div>
-                <div id="Web-Dev" class="tabcontent"></div>
-                <div id="Hardware" class="tabcontent"></div>
-                <div id="Dev-Tools" class="tabcontent"></div>
-            </div>
+        <div class="project" onclick="openSubModal('homesecurityModal','projectsModal')">
+          <img src="images/project-cards/homesecurity.jpg" />
+          <div class="project-text">
+            <p><b>Home Security System</b>&nbsp;&nbsp; IoT-based project built using Arduinos, a Raspberry Pi, and sensors along with a companion Android application. </p>
           </div>
         </div>
-
-        <div id="projectsModal" class="modal">
-          <div id="projectsModalContent" class="modal-content">
-            <span class="close" onclick="closeModal('projectsModal','container')">&times;</span>
-            <h2>PROJECTS</h2>
-            <hr class="modal-line"/>
-            <div class="project-row">
-                <div class="project" onclick="openSubModal('mediasaurusModal','projectsModal')">
-                    <img src="images/mediasaurus-mock.jpg"/>
-                    <div class="project-text">
-                        <p><b>Mediasaurus</b>&nbsp;&nbsp; A media recommendation engine built as a web application
-                        constructed using the MEAN stack. </p>
-                    </div>
-                </div>
-                <div class="project" onclick="openSubModal('homesecurityModal','projectsModal')">
-                    <img src="images/homesecurity.jpg"/>
-                    <div class="project-text">
-                        <p><b>Home Security System</b>&nbsp;&nbsp; IoT-based project built using Arduinos,
-                        a Raspberry Pi, and sensors along with a companion Android application. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="project-row">
-                <div class="project" onclick="openSubModal('foodscramblerModal','projectsModal')">
-                    <img src="images/foodscrambler-mock.jpg"/>
-                    <div class="project-text">
-                        <p><b>Food Scrambler</b>&nbsp;&nbsp; An entry-level Android application project to help users
-                        randomly select restaurants and food to eat. </p>
-                    </div>
-                </div>
-                <div class="project" onclick="openSubModal('vexModal','projectsModal')">
-                    <img src="images/robosavages.jpg"/>
-                    <div class="project-text">
-                        <p><b>VEX Robotics</b>&nbsp;&nbsp; Robosavages, a team where we built and programmed robots
-                        used to compete in local and international robotics tournaments.</p>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="project-row">
+        <div class="project" onclick="openSubModal('liftplusoneModal','projectsModal')">
+          <img src="images/project-cards/600x400.jpg" />
+          <div class="project-text">
+            <p><b>Lift +1</b>&nbsp;&nbsp; An Android application project to aid in keeping track of workout routines.</p>
           </div>
         </div>
-
-        <div id="mediasaurusModal" class="project-modal">
-          <div id="mediasaurusModalContent" class="modal-content">
-            <span class="close" onclick="closeSubModal('mediasaurusModal','projectsModal')">&times;</span>
-            <h2>MEDIASAURUS</h2>
-            <hr class="modal-line"/>
-            <img class="project-image" src="images/mediasaurus-site.jpg" />
-            <p>
-                The inspiration and motiviation behind Mediasaurus came from the need to optimize
-                Netflix and TV time. People would spend countless minutes pondering which show or movie
-                to watch next when that precious time could be used for media consumption instead.
-                Mediasaurus helps solve this issue by recommending users movies depending on their genre
-                and movie preferences. Each user is catered with a personalized list of movies which
-                dynamically updates based off their recent 'likes'.
-                <br /><br />
-
-                This web application was built using the MEAN stack (MongoDB, Express.js, AngularJS, Node.js).
-                Our team of six decided on this tech stack because we wanted to use something modern and
-                the flexibility of this stack allowed us to realize our product. <br /><br />
-
-                My role on Mediasaurus was in front end development. I worked on setting up website structure,
-                designing UI/UX, implementing MVC, and integrating back end endpoints. The tools I used for these
-                tasks were HTML, CSS with Bootstrap, and AngularJS.
-            </p>
+        <div class="project" onclick="openSubModal('foodscramblerModal','projectsModal')">
+          <img src="images/project-cards/foodscrambler-mock.jpg" />
+          <div class="project-text">
+            <p><b>Food Scrambler</b>&nbsp;&nbsp; An entry-level Android application project to help users randomly select restaurants and food to eat. </p>
           </div>
         </div>
-
-        <div id="homesecurityModal" class="project-modal">
-          <div id="homesecurityModalContent" class="modal-content">
-            <span class="close" onclick="closeSubModal('homesecurityModal','projectsModal')">&times;</span>
-            <h2>HOME SECURITY SYSTEM</h2>
-            <hr class="modal-line"/>
-            <img class="project-image" src="images/homesecurity.jpg" />
-            <p>
-                The Home Security System was built as my team's final Computer Engineering Design Studio Project.
-                The project utilized a combination of hardware and software to achieve an IoT-based system. <br /><br />
-
-                Using an array of sensors connected to a master-slave Arduino setup using I2C, we were able
-                to model a home security system with a door status checker, laser tripwires, motion detection,
-                alarms, and timed lighting. We created an Android application with a simple UI to allow us to
-                monitor, set, and trigger each individual component of the security system. Using a Raspberry Pi
-                as our central server, we were able to relay data between the Arduinos and the Android app. <br /><br />
-
-                I lead in the construction of the model house and the development of the Android application.
-                I was responsible for building the model house, selecting the sensor array, and wirnig everything
-                together. For the Android application I lead in designing the layout the UI and building the
-                core functionality for instruction handling and sending. <br /><br />
-
-                You can view some project photos and screenshots of the Android app
-                <a target="_blank" href="https://goo.gl/photos/YwnSYqSGwt1a4j1V6" style="color:white">here</a>.
-            </p>
+      </div>
+      <div class="project-row">
+        <div class="project" onclick="openSubModal('bwwebsiteModal','projectsModal')">
+          <img src="images/project-cards/bwwebsite-mock.png" />
+          <div class="project-text">
+            <p><b>B&W Website</b>&nbsp;&nbsp; A sample website design. </p> <br><br>
           </div>
         </div>
-
-        <div id="foodscramblerModal" class="project-modal">
-          <div id="foodscramblerModalContent" class="modal-content">
-            <span class="close" onclick="closeSubModal('foodscramblerModal','projectsModal')">&times;</span>
-            <h2>FOOD SCRAMBLER</h2>
-            <hr class="modal-line"/>
-            <div class="project-app-container">
-                <img class="project-image-app" src="images/foodscrambler-1.png" />
-                <img class="project-image-app" src="images/foodscrambler-2.png" />
-            </div>
-            <p>
-                The Food Scrambler Android application was created to help alleviate the pressure of
-                picking a restaurant to dine at or choosing something off a menu to eat. Users can
-                enter a list of things they are considering and the app will handle the rest. <br /><br />
-
-                This was my first project in the Android space and it springboarded me into
-                the world of mobile development.
-            </p>
+        <div class="project" onclick="openSubModal('vexModal','projectsModal')">
+          <img src="images/project-cards/robosavages.jpg" />
+          <div class="project-text">
+            <p><b>VEX Robotics</b>&nbsp;&nbsp; Robosavages, a team where we built and programmed robots used to compete in local and international robotics tournaments.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <div id="vexModal" class="project-modal">
-          <div id="vexModalContent" class="modal-content">
-            <span class="close" onclick="closeSubModal('vexModal','projectsModal')">&times;</span>
-            <h2>VEX ROBOTICS</h2>
-            <hr class="modal-line"/>
-            <div class="video-wrapper">
-                <iframe id="vex-video" src='https://www.youtube.com/embed/0Ar2HtzPwFM?enablejsapi=1' frameborder='0' allowfullscreen></iframe>
-            </div>
-            <p>
-                The VEX Robotics platform exposes high school students to the world of STEM.
-                This system is used in a worldwide competition in which students design robots
-                to complete a yearly challenge. The VEX Robotics Competition offers students an
-                opportunity to work in a team-based environment that promotes hands-on experience
-                in mechatronics, teamwork, and leadership.  <br /><br />
+  <div id="mediasaurusModal" class="project-modal">
+    <div id="mediasaurusModalContent" class="modal-content">
+      <span class="close" onclick="closeSubModal('mediasaurusModal','projectsModal')">&times;</span>
+      <h2>Mediasaurus</h2>
+      <hr class="modal-line" />
+      <img class="project-image" src="images/mediasaurus-site.jpg" />
+      <ul class="tools-list">
+        <ul class="tools-list-item">HTML</ul>
+        <ul class="tools-list-item">Bootstrap</ul>
+        <ul class="tools-list-item">MongoDB</ul>
+        <ul class="tools-list-item">Express.js</ul>
+        <ul class="tools-list-item">AngularJS</ul>
+        <ul class="tools-list-item">Node.js</ul>
+      </ul>
+      <p>
+        The inspiration and motiviation behind Mediasaurus came from the need to optimize Netflix and TV time. People would spend countless minutes pondering which show or movie to watch next when that precious time could be used for media consumption instead.
+        Mediasaurus helps solve this issue by recommending users movies depending on their genre and movie preferences. Each user is catered with a personalized list of movies which dynamically updates based off their recent 'likes. <br><br> This
+        web application was built using the MEAN stack (MongoDB, Express.js, AngularJS, Node.js). Our team of six decided on this tech stack because we wanted to use something modern and the flexibility of this stack allowed us to realize our product.
+        <br><br> My role on Mediasaurus was in front end development. I worked on setting up website structure, designing UI/UX, implementing MVC, and integrating back end endpoints. The tools I used for these tasks were HTML, CSS with Bootstrap, and
+        AngularJS.
+      </p>
+    </div>
+  </div>
 
-                By working through several design and prototyping iterations, my team and I were
-                able to assemble world-class robots which we used to compete at international levels.
-                Using C, we programmed the robots for remote operation and as well as autonomous
-                movement, which included dynamic sequences based on the state of game field. <br /><br />
+  <div id="homesecurityModal" class="project-modal">
+    <div id="homesecurityModalContent" class="modal-content">
+      <span class="close" onclick="closeSubModal('homesecurityModal','projectsModal')">&times;</span>
+      <h2>Home Security System</h2>
+      <hr class="modal-line" />
+      <img class="project-image" src="images/homesecurity.jpg" />
+      <ul class="tools-list">
+        <ul class="tools-list-item">Arduino</ul>
+        <ul class="tools-list-item">Raspberry Pi</ul>
+        <ul class="tools-list-item">Android</ul>
+      </ul>
+      <p>
+        The Home Security System was built as my team's final Computer Engineering Design Studio Project. The project utilized a combination of hardware and software to achieve an IoT-based system. <br><br> Using an array of sensors connected to a master-slave
+        Arduino setup using I2C, we were able to model a home security system with a door status checker, laser tripwires, motion detection, alarms, and timed lighting. We created an Android application with a simple UI to allow us to monitor, set, and
+        trigger each individual component of the security system. Using a Raspberry Pi as our central server, we were able to relay data between the Arduinos and the Android app. <br><br> I lead in the construction of the model house and the development
+        of the Android application. I was responsible for building the model house, selecting the sensor array, and wirnig everything together. For the Android application I lead in designing the layout the UI and building the core functionality for instruction
+        handling and sending. <br><br> You can view some project photos and screenshots of the Android app
+        <a target="_blank" href="https://goo.gl/photos/YwnSYqSGwt1a4j1V6" style="color:white">here</a>.
+      </p>
+    </div>
+  </div>
 
-                You can view some robots I helped build
-                <a target="_blank" href="https://goo.gl/photos/MA7En2kH5fiQmcHf7" style="color:white">here</a>.
+  <div id="liftplusoneModal" class="project-modal">
+    <div id="liftplusoneModalContent" class="modal-content">
+      <span class="close" onclick="closeSubModal('liftplusoneModal','projectsModal')">&times;</span>
+      <h2>Lift +1</h2>
+      <hr class="modal-line" />
+      <div class="project-app-container">
+        <img class="project-image-app" src="images/foodscrambler-1.png" />
+        <img class="project-image-app" src="images/foodscrambler-2.png" />
+      </div>
+      <ul class="tools-list">
+        <ul class="tools-list-item">Android</ul>
+      </ul>
+      <p>
+        Under construction!
+      </p>
+    </div>
+  </div>
 
-            </p>
-          </div>
-        </div>
+  <div id="foodscramblerModal" class="project-modal">
+    <div id="foodscramblerModalContent" class="modal-content">
+      <span class="close" onclick="closeSubModal('foodscramblerModal','projectsModal')">&times;</span>
+      <h2>Food Scrambler</h2>
+      <hr class="modal-line" />
+      <div class="project-app-container">
+        <img class="project-image-app" src="images/foodscrambler-1.png" />
+        <img class="project-image-app" src="images/foodscrambler-2.png" />
+      </div>
+      <ul class="tools-list">
+        <ul class="tools-list-item">Android</ul>
+      </ul>
+      <p>
+        The Food Scrambler Android application was created to help alleviate the pressure of picking a restaurant to dine at or choosing something off a menu to eat. Users can enter a list of things they are considering and the app will handle the rest. <br><br>        This was my first project in the Android space and it springboarded me into the world of mobile development.
+      </p>
+    </div>
+  </div>
 
-        <div id="resumeModal" class="modal">
-          <div id="resumeModalContent" class="modal-content">
-            <span class="close" onclick="closeModal('resumeModal','container')">&times;</span>
-            <h2>RESUME</h2>
-            <hr class="modal-line"/>
-            <h3 class="resume-header">Technical Work Experience</h3>
-            <hr class="resume-header-line" align="center"/>
-            <p class="resume-item">
-                <span class="resume-title">Vision Critical</span>
-                <span class="resume-timespan">Jan 2017 - Ongoing</span>
-                <br>
-                <span class="resume-item-description">Software Engineering Intern</span>
-                <span class="resume-location">Toronto, ON</span>
-            </p>
-            <ul class="resume-list">
-                <li>
-                    Developed and tested back-end software systems for the SaaS products of an industry leader
-                    in the cloud-based customer intelligence space using Web API oriented languages and tools
-                    such as C#, SQL, OracleDB, and Powershell
-                </li>
-                <li>
-                    Implemented core functionality and deployment systems of an identity provider
-                    which leveraged new web service technologies
-                </li>
-                <li>
-                    Constructed an internal tool using ASP.NET Web Forms to improve work efficiency of team members by consolidating
-                    all the endpoints of our systems into one easy-to-navigate UI
-                </li>
-                <li>
-                    Enhanced the team status monitor with React.js to display additional statisitics and graphs on pipelines
-                </li>
-                <li>
-                    Improved code coverage throughout each repository by constructing new
-                    unit, integration, and acceptance tests using Nunit
-                </li>
-            </ul>
+  <div id="bwwebsiteModal" class="project-modal">
+    <div id="bwwebsiteModalContent" class="modal-content">
+      <span class="close" onclick="closeSubModal('bwwebsiteModal','projectsModal')">&times;</span>
+      <h2>B&W Webiste</h2>
+      <hr class="modal-line" />
+      <div class="project-app-container">
+        <img class="project-image" src="images/bw-website.png" />
+      </div>
+      <ul class="tools-list">
+        <ul class="tools-list-item">HTML</ul>
+        <ul class="tools-list-item">Bootstrap</ul>
+        <ul class="tools-list-item">AngularJS</ul>
+      </ul>
+      <p>
+        A sample website design.
 
-            <h3 class="resume-header">Education</h3>
-            <hr class="resume-header-line" align="center"/>
+        Take a look at it <a target="_blank" href="http://www.kevinqiu.me/bw-website" style="color:white">here</a>.
+      </p>
+    </div>
+  </div>
 
-            <p class="resume-item">
-                <span class="resume-title">University of British Columbia</span>
-                <span class="resume-timespan">Sept 2014 - Ongoing</span>
-                <br>
-                <span class="resume-item-description">Bachelor of Applied Science - Computer Engineering</span>
-                <span class="resume-location">Exp. Grad: May 2019</span>
-            </p>
-            <ul class="resume-list">
-                <li><p class="course-name">CPEN</p><p class="course-number">321</p>Software Engineering (Java, MEAN Stack)</li>
-                <li><p class="course-name">CPEN</p><p class="course-number">311</p>Digital Systems Design (Verilog)</li>
-                <li><p class="course-name">CPSC</p><p class="course-number">221</p>Algorithms and Data Structures (C++)</li>
-                <li><p class="course-name">CPSC</p><p class="course-number">261</p>Computer Systems (C)</li>
-                <li><p class="course-name">CPEN</p><p class="course-number">221</p>Software Construction (Java)</li>
-                <li><p class="course-name">ELEC</p><p class="course-number">291</p>Computer Engineering Design Studio (Arduino, Java, MATLAB, Android)</li>
-                <li><p class="course-name">ELEC</p><p class="course-number">201</p>Circuit Analysis</li>
-                <li><p class="course-name">CPEN</p><p class="course-number">281</p>Technical Communication</li>
-            </ul>
+  <div id="vexModal" class="project-modal">
+    <div id="vexModalContent" class="modal-content">
+      <span class="close" onclick="closeSubModal('vexModal','projectsModal')">&times;</span>
+      <h2>VEX Robotics</h2>
+      <hr class="modal-line" />
+      <div class="video-wrapper">
+        <iframe id="vex-video" src='https://www.youtube.com/embed/0Ar2HtzPwFM?enablejsapi=1' frameborder='0' allowfullscreen></iframe>
+      </div>
+      <ul class="tools-list">
+        <ul class="tools-list-item">C</ul>
+        <ul class="tools-list-item">Robotics</ul>
+      </ul>
+      <p>
+        The VEX Robotics platform exposes high school students to the world of STEM. This system is used in a worldwide competition in which students design robots to complete a yearly challenge. The VEX Robotics Competition offers students an opportunity to
+        work in a team-based environment that promotes hands-on experience in mechatronics, teamwork, and leadership. <br><br> By working through several design and prototyping iterations, my team and I were able to assemble world-class robots
+        which we used to compete at international levels. Using C, we programmed the robots for remote operation and as well as autonomous movement, which included dynamic sequences based on the state of game field. <br><br> You can view some robots I
+        built
+        <a target="_blank" href="https://goo.gl/photos/MA7En2kH5fiQmcHf7" style="color:white">here</a>
+      </p>
+    </div>
+  </div>
 
-            <h3 class="resume-header">Volunteer Work</h3>
-            <hr class="resume-header-line" align="center"/>
-            <p class="resume-item">
-                <span class="resume-title">Penguin Robotics</span>
-                <span class="resume-timespan">Oct 2015 - Dec 2016</span>
-                <br>
-                <span class="resume-item-description">Co-Founder</span>
-            </p>
-            <ul class="resume-list">
-                <li>
-                    Setup and run high school VEX Robotics tournaments in the Lower Mainland, acting as a game referee, field manager, or technical judge
-                </li>
-                <li>
-                    Mentored a group of beginner robotics students in a programming workshop
-                </li>
-            </ul>
-            <p class="resume-item">
-                <span class="resume-title">St. John Ambulance</span>
-                <span class="resume-timespan">Jan 2015 - Apr 2015</span>
-                <br>
-                <span class="resume-item-description">Coach for Casuality Simulation Team</span>
-            </p>
-            <ul class="resume-list">
-                <li>
-                    Coached and managed a casualty simulation team of four; ran biweekly practices for four hours a week
-                </li>
-                <li>
-                    Developed individual team member’s performance and worked with the team to improve teamwork and communication skills,
-                    eventually leading the team to second place in a provincial tournament
-                </li>
-            </ul>
+  <div id="resumeModal" class="modal">
+    <div id="resumeModalContent" class="modal-content">
+      <span class="close" onclick="closeModal('resumeModal','container')">&times;</span>
+      <h2>Resume</h2>
+      <hr class="modal-line" />
+      <h3 class="resume-header">Technical Work Experience</h3>
+      <hr class="resume-header-line" align="center" />
+      <p class="resume-item">
+        <span class="resume-title">Vision Critical</span>
+        <span class="resume-timespan">Jan 2017 - Ongoing</span>
+        <br>
+        <span class="resume-item-description">Software Engineering Intern</span>
+        <span class="resume-location">Toronto, ON</span>
+      </p>
+      <ul class="resume-list">
+        <li>
+          Developed and tested back-end software systems for the SaaS products of an industry leader in the cloud-based customer intelligence space using Web API oriented languages and tools such as C#, SQL, OracleDB, and Powershell
+        </li>
+        <li>
+          Implemented core functionality and deployment systems of an identity provider which leveraged new web service technologies
+        </li>
+        <li>
+          Constructed an internal tool using ASP.NET Web Forms to improve work efficiency of team members by consolidating all the endpoints of our systems into one easy-to-navigate UI
+        </li>
+        <li>
+          Enhanced the team status monitor with React.js to display additional statisitics and graphs on pipelines
+        </li>
+        <li>
+          Improved code coverage throughout each repository by constructing new unit, integration, and acceptance tests using Nunit
+        </li>
+      </ul>
 
-          </div>
-        </div>
+      <h3 class="resume-header">Education</h3>
+      <hr class="resume-header-line" align="center" />
 
-        <div id="contactModal" class="modal">
-          <div id="contactModalContent" class="modal-content">
-            <span class="close" onclick="closeModal('contactModal','container')">&times;</span>
-            <h2>CONTACT</h2>
-            <hr class="modal-line"/>
-            <p style="margin-top:20px"> Email: kevinqiu96@gmail.com </p>
-            <p> GitHub: <a target="_blank" href="https://github.com/kevqiu" class="link" style="color:white">Here</a></p>
-            <p> LinkedIn: <a target="_blank" href="https://www.linkedin.com/in/kevin-qiu-b673486a" class="link" style="color:white">Here</a></p>
-          </div>
-        </div>
+      <p class="resume-item">
+        <span class="resume-title">University of British Columbia</span>
+        <span class="resume-timespan">Sept 2014 - Ongoing</span>
+        <br>
+        <span class="resume-item-description">Bachelor of Applied Science - Computer Engineering</span>
+        <span class="resume-location">Exp. Grad: May 2019</span>
+      </p>
+      <ul class="resume-list">
+        <li>
+          <p class="course-name">CPEN</p>
+          <p class="course-number">321</p>Software Engineering (Java, MEAN Stack)</li>
+        <li>
+          <p class="course-name">CPEN</p>
+          <p class="course-number">311</p>Digital Systems Design (Verilog)</li>
+        <li>
+          <p class="course-name">CPSC</p>
+          <p class="course-number">221</p>Algorithms and Data Structures (C++)</li>
+        <li>
+          <p class="course-name">CPSC</p>
+          <p class="course-number">261</p>Computer Systems (C)</li>
+        <li>
+          <p class="course-name">CPEN</p>
+          <p class="course-number">221</p>Software Construction (Java)</li>
+        <li>
+          <p class="course-name">ELEC</p>
+          <p class="course-number">291</p>Computer Engineering Design Studio (Arduino, Java, MATLAB, Android)</li>
+        <li>
+          <p class="course-name">ELEC</p>
+          <p class="course-number">201</p>Circuit Analysis</li>
+        <li>
+          <p class="course-name">CPEN</p>
+          <p class="course-number">281</p>Technical Communication</li>
+      </ul>
+      <p style="font-size:10px"> Current CGPA: 80% </p>
 
-        <div id="container">
-            <div id="content">
-                <canvas id="upper-line"></canvas>
-                <h1>KEVIN QIU</h1>
-                <h3>Candidate for B.ASc of Computer Engineering</h3>
-                <h3>University of British Columbia</h3>
-                <canvas id="lower-line"></canvas>
-                <table class="button-table">
-                    <td><button type="button" class="menu-button" id="aboutBtn" onclick="openModal('aboutModal','container')">ABOUT</button></td>
-                    <td><button type="button" class="menu-button" id="skillsBtn" onclick="openModal('skillsModal','container')">SKILLS</button></td>
-                    <td><button type="button" class="menu-button" id="projectsBtn" onclick="openModal('projectsModal','container')">PROJECTS</button></td>
-                    <td><button type="button" class="menu-button" id="resumeBtn" onclick="openModal('resumeModal','container')">RESUME</button></td>
-                    <td><button type="button" class="menu-button" id="contactBtn" onclick="openModal('contactModal','container')">CONTACT</button></td>
-                </table>
-                <br style="line-height:30px;">
-                <table class="icon-row">
-                    <td>
-                        <a target="_blank" href="https://github.com/kevqiu" class="link"><img class="link-icon" src="images/github.png"/></a>
-                    </td>
-                    <td>
-                        <a target="_blank" href="https://www.linkedin.com/in/kevin-qiu-b673486a"><img class="link-icon" src="images/linkedin.png"/></a>
-                    </td>
-                </table>
-                <div id="footer">&#169; 2017 Kevin Qiu</div>
-            </div>
-        </div>
+      <h3 class="resume-header">Volunteer Work</h3>
+      <hr class="resume-header-line" align="center" />
+      <p class="resume-item">
+        <span class="resume-title">Penguin Robotics</span>
+        <span class="resume-timespan">Oct 2015 - Dec 2016</span>
+        <br>
+        <span class="resume-item-description">Co-Founder</span>
+      </p>
+      <ul class="resume-list">
+        <li>
+          Setup and run high school VEX Robotics tournaments in the Lower Mainland, acting as a game referee, field manager, or technical judge
+        </li>
+        <li>
+          Mentored a group of beginner robotics students in a programming workshop
+        </li>
+      </ul>
+      <p class="resume-item">
+        <span class="resume-title">St. John Ambulance</span>
+        <span class="resume-timespan">Jan 2015 - Apr 2015</span>
+        <br>
+        <span class="resume-item-description">Coach for Casuality Simulation Team</span>
+      </p>
+      <ul class="resume-list">
+        <li>
+          Coached and managed a casualty simulation team of four; ran biweekly practices for four hours a week
+        </li>
+        <li>
+          Developed individual team member’s performance and worked with the team to improve teamwork and communication skills, eventually leading the team to second place in a provincial tournament
+        </li>
+      </ul>
 
-    </body>
-    <!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script> -->
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/skills.js"></script>
-    <script type="text/javascript" src="js/modal.js"></script>
+    </div>
+  </div>
+
+  <div id="contactModal" class="modal">
+    <div id="contactModalContent" class="modal-content">
+      <span class="close" onclick="closeModal('contactModal','container')">&times;</span>
+      <h2>Contact</h2>
+      <hr class="modal-line" />
+      <p style="margin-top:20px"> Email: kevinqiu96@gmail.com </p>
+      <p> GitHub: <a target="_blank" href="https://github.com/kevqiu" class="link" style="color:white">Here</a>
+      </p>
+      <p> LinkedIn: <a target="_blank" href="https://www.linkedin.com/in/kevin-qiu-b673486a" class="link" style="color:white">Here</a>
+      </p>
+    </div>
+  </div>
+
+  <div id="container">
+    <div id="content">
+      <canvas id="upper-line"></canvas>
+      <h1>KEVIN QIU</h1>
+      <h3>Candidate for B.ASc of Computer Engineering</h3>
+      <h3>University of British Columbia</h3>
+      <canvas id="lower-line"></canvas>
+      <table class="button-table">
+        <td>
+          <button type="button" class="menu-button" id="aboutBtn" onclick="openModal('aboutModal','container')">ABOUT</button>
+        </td>
+        <td>
+          <button type="button" class="menu-button" id="skillsBtn" onclick="openModal('skillsModal','container')">SKILLS</button>
+        </td>
+        <td>
+          <button type="button" class="menu-button" id="projectsBtn" onclick="openModal('projectsModal','container')">PROJECTS</button>
+        </td>
+        <td>
+          <button type="button" class="menu-button" id="resumeBtn" onclick="openModal('resumeModal','container')">RESUME</button>
+        </td>
+        <td>
+          <button type="button" class="menu-button" id="contactBtn" onclick="openModal('contactModal','container')">CONTACT</button>
+        </td>
+      </table>
+      <br style="line-height:30px;">
+      <table class="icon-row">
+        <td>
+          <a target="_blank" href="https://github.com/kevqiu" class="link"><img class="link-icon" src="images/github.png" />
+                  </a>
+        </td>
+        <td>
+          <a target="_blank" href="https://www.linkedin.com/in/kevin-qiu-b673486a"><img class="link-icon" src="images/linkedin.png" />
+                  </a>
+        </td>
+      </table>
+      <div id="footer">&#169; 2017 Kevin Qiu</div>
+    </div>
+  </div>
+</body>
+<!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script> -->
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/skills.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+
 </html>
