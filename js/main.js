@@ -55,5 +55,5 @@ function drawMainLines() {
         // lerp : a  + (b - a) * f
         c2.lineTo(startX2 + (endX2 - startX2) * amount, y);
         c2.stroke();
-    }, 14);
+    }, 8);
 }

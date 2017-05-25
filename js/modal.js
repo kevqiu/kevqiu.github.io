@@ -8,7 +8,7 @@ function openModal(modal, container) {
         modalElement.classList.add('fade-in-modal');
         modalElement.getElementsByTagName('div')[0].classList.add('fade-in-content');
         modalElement.style.display = 'block';
-    }, 700);
+    }, 500);
 }
 
 function closeModal(modal, container) {
@@ -20,7 +20,7 @@ function closeModal(modal, container) {
     modalElement.getElementsByTagName('div')[0].classList.add('fade-out-content');
     setTimeout(function () {
         fadeIn(containerElement);
-    }, 700);
+    }, 500);
 }
 
 function openSubModal(child, parent) {
@@ -36,7 +36,7 @@ function openSubModal(child, parent) {
         childElement.classList.add('fade-in-modal');
         childElement.getElementsByTagName('div')[0].classList.add('fade-in-content');
         childElement.style.display = 'block';
-    }, 700);
+    }, 500);
 }
 
 function closeSubModal(child, parent) {
@@ -51,7 +51,7 @@ function closeSubModal(child, parent) {
         parentElement.getElementsByTagName('div')[0].classList.remove('fade-out-content');
         parentElement.classList.add('fade-in-modal');
         parentElement.getElementsByTagName('div')[0].classList.add('fade-in-content');
-    }, 700);
+    }, 500);
     if (child == 'vexModal') { // kill the video!!!
         document.getElementById('vex-video')
             .contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}','*');

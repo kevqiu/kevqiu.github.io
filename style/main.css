@@ -86,10 +86,10 @@ canvas {
   margin: 0 auto;
 
   opacity: 0;
-  -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-  animation: fadein 2s forwards;
-  -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
-  animation-delay: 1.5s;
+  -webkit-animation: fadein 1.5s forwards; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 1.5s forwards;
+  -webkit-animation-delay: 1.2s; /* Chrome, Safari, Opera */
+  animation-delay: 1.2s;
 }
 
 .button-table td {
@@ -130,10 +130,10 @@ canvas {
   margin: 0 auto;
 
   opacity: 0;
-  -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-  animation: fadein 2s forwards;
-  -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
-  animation-delay: 2s;
+  -webkit-animation: fadein 1.5s forwards; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 1.5s forwards;
+  -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
+  animation-delay: 1.5s;
 }
 
 .icon-row td {
